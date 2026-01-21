@@ -1,0 +1,326 @@
+/*
+  hi you! 🙌
+  welcome to my humble journey of always learning. feel free to copy-edit-paste as you like. let me know if you find something useful, helpful. i do my best to cite origins of ideas and approaches that are not mine. 
+  best, raigo!
+
+  hi@raigo.design
+  2026
+
+  —
+
+  appreciated resources:
+  - Utopia fluid responsive design calulators by James Gilyead & Trys Mudford // https://utopia.fyi/
+
+*/
+
+
+
+/* content list
+=== === === === === === === === === === === === 
+
+  - 01. layout
+  – 02. spacing
+  – 03. radius
+  – 04. colour
+  – 05. typography
+  – 06. links
+  – 07. buttons
+  – 08. border
+  – 09. transition
+  – 10. animation
+
+*/
+
+
+
+/* 01. layout
+=== === === === === === === === === === === === */
+
+  :root {
+
+  }
+
+
+
+/* 02. spacing
+=== === === === === === === === === === === === */
+
+  :root {
+
+    /*
+      used Utopia's fluid space calc by James Gilyead & Trys Mudford.
+      https://utopia.fyi/space/calculator/?c=360,18,1.2,1240,20,1.25,5,2,&s=,1.5|2|3|4|6,s-l&g=s,l,xl,12
+    */
+
+    /* fixed spacing */
+    --space-1: 0.25rem;   /* 4px */
+    --space-2: 0.5rem;    /* 8px */
+    --space-3: 0.75rem;   /* 12px */
+    --space-4: 1rem;      /* 16px */
+    --space-6: 1.5rem;    /* 24px */
+    --space-9: 2.25rem;   /* 36px */
+    --space-12: 3rem;     /* 48px */
+    --space-16: 4rem;     /* 64px */
+    --space-18: 4.5rem;   /* 72px */
+    --space-24: 6rem;     /* 96px */
+    --space-30: 7.5rem;   /* 120px */
+    --space-36: 9rem;     /* 144px */
+
+    /* fluid spacing */
+    --space-fluid-1: 0.25rem;   /* 4px */
+    --space-fluid-2: 0.5rem;    /* 8px */
+    --space-fluid-3: 0.75rem;   /* 12px */
+    --space-fluid-4: clamp(0.75rem, 0.6477rem + 0.4545vw, 1rem);   /* 12-16px */
+    --space-fluid-6: clamp(1rem, 0.7955rem + 0.9091vw, 1.5rem);    /* 16-24px */
+    --space-fluid-9: clamp(1.5rem, 1.1932rem + 1.3636vw, 2.25rem); /* 24-36px */
+    --space-fluid-12: 3rem;     /* 48px */
+    --space-fluid-16: 4rem;     /* 64px */
+    --space-fluid-18: clamp(3rem, 2.3864rem + 2.7273vw, 4.5rem);   /* 48-72px */
+    --space-fluid-24: 6rem;     /* 96px */
+    --space-fluid-30: clamp(4.5rem, 3.2727rem + 5.4545vw, 7.5rem); /* 72-120px */
+    --space-fluid-36: clamp(6rem, 4.7727rem + 5.4545vw, 9rem);     /* 96-144px */
+    
+  }
+
+
+
+/* 03. radius
+=== === === === === === === === === === === === */
+
+  :root {
+
+    /* 
+      baseline corner radius is set for 18px - example buttons.
+
+      example: to calculate parent element corner radius, we add to button's baseline (18) 1/2 of the space between the button and border of the parent element. so, if parent element padding is 36px, then the corner radius will be 36px (baseline + 1/2 of space // 18 + 18). 
+      
+      likely will be revisiting and simplifing this logic in the future.
+    */
+    --rad-none: 0;
+    --rad-base: 1.125rem; /* 18px */
+    --rad-rounded: 100rem; /* 1000px */
+    
+  }
+
+/* 04. colour
+=== === === === === === === === === === === === */
+
+  :root {
+
+    /* primitives */
+    --col-gray: hsl(72, 6%, 90%);
+    --col-salmon: hsl(17, 40%, 68%);
+
+    /*  */
+    
+    /* neutrals */
+    --col-neutral-0: hsl(from var(--col-gray) h s 98%);
+    --col-neutral-50: hsl(from var(--col-gray) h s 90%);
+    --col-neutral-100: hsl(from var(--col-gray) h s 80%);
+    --col-neutral-200: hsl(from var(--col-gray) h s 70%);
+    --col-neutral-300: hsl(from var(--col-gray) h s 60%);
+    --col-neutral-400: hsl(from var(--col-gray) h s 50%);
+    --col-neutral-500: hsl(from var(--col-gray) h s 40%);
+    --col-neutral-600: hsl(from var(--col-gray) h s 30%);
+    --col-neutral-700: hsl(from var(--col-gray) h s 20%);
+    --col-neutral-800: hsl(from var(--col-gray) h s 15%);
+    --col-neutral-900: hsl(from var(--col-gray) h s 10%);
+
+    /* accent */
+    --col-accent-50: hsl(from var(--col-salmon) h s 98%);
+    --col-accent-100: hsl(from var(--col-salmon) h s 95%);
+    --col-accent-200: hsl(from var(--col-salmon) h s 90%);
+    --col-accent-300: hsl(from var(--col-salmon) h 10% 85%);
+    --col-accent-400: hsl(from var(--col-salmon) h s 75%);
+
+    --col-accent-500: hsl(from var(--col-salmon) h s 68%);
+
+    --col-accent-600: hsl(from var(--col-salmon) h s 60%);
+    --col-accent-700: hsl(from var(--col-salmon) h s 40%);
+    --col-accent-800: hsl(from var(--col-salmon) h s 20%);
+    --col-accent-900: hsl(from var(--col-salmon) h s 10%);
+
+    /* 
+      Kevin Powell has a good intro to relative colours:
+      https://www.youtube.com/watch?v=vGfTyHPWZLE
+     */
+
+    /* */
+
+    /* background */
+    --col-bg-page-light: var(--col-neutral-50);
+
+    /* surface */
+    --col-surface-primary: var(--col-neutral-50);
+    --col-surface-secondary: var(--col-accent-500);
+    --col-surface-tertiary: var(--col-accent-300);
+
+    /* text */
+    --col-txt-primary: var(--col-neutral-900);
+    --col-txt-secondary: var(--col-neutral-600);
+    --col-txt-disabled: var(--col-neutral-300);
+
+    /* link-text */
+    --col-link-txt-default: var(--col-neutral-900);
+    --col-link-txt-hover: var(--col-neutral-600);
+    --col-link-txt-active: var(--col-neutral-600);
+    --col-link-txt-focus: var(--col-neutral-900);
+    --col-link-txt-disabled: var(--col-neutral-300);
+    /* link-border */
+    --col-link-border-default: var(--col-neutral-400);
+    --col-link-border-hover: var(--col-neutral-300);
+    --col-link-border-active: var(--col-neutral-300);
+    --col-link-border-focus: var(--col-neutral-400);
+    --col-link-border-disabled: var(--col-neutral-300);
+
+    /* action-primary-background */
+    --col-action-primary-bg-default: var(--col-accent-500);
+    --col-action-primary-bg-hover: var(--col-accent-600);
+    --col-action-primary-bg-active: var(--col-accent-600);
+    --col-action-primary-bg-focus: var(--col-accent-500);
+    --col-action-primary-bg-selected: var(--col-accent-600);
+    --col-action-primary-bg-disabled: var(--col-accent-500);
+    /* action-primary-text */
+    --col-action-primary-txt-default: var(--col-neutral-900);
+    --col-action-primary-txt-disabled: var(--col-neutral-300);
+
+    /* action-secondary-background */
+    --col-action-secondary-bg-default: var(--col-neutral-100);
+    --col-action-secondary-bg-hover: var(--col-neutral-200);
+    --col-action-secondary-bg-active: var(--col-neutral-200);
+    --col-action-secondary-bg-focus: var(--col-neutral-100);
+    --col-action-secondary-bg-selected: var(--col-neutral-200);
+    --col-action-secondary-bg-disabled: var(--col-neutral-100);
+    /* action-secondary-text */
+    --col-action-secondary-txt-default: var(--col-neutral-900);
+    --col-action-secondary-txt-disabled: var(--col-neutral-300);
+
+    /* focus-ring */
+    --col-focus-ring-light: var();
+
+    /* dimming overlay */
+    --col-dim-light: var();
+    --col-dim-dark: var();
+
+  }
+
+  
+
+
+
+/* 05. typography
+=== === === === === === === === === === === === */
+
+  :root {
+
+    /* font-size primitives */
+    /* 
+      used Utopia's fluid type scale calc by James Gilyead & Trys Mudford.
+      https://utopia.fyi/type/calculator/?c=360,18,1.2,1240,20,1.25,6,2,320&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+    */
+    /* 12.50	to 12.80 in pixels */
+    --fluid-step--2: clamp(0.7813rem, 0.7736rem + 0.0341vw, 0.8rem);
+    /* 15 to 16 in pixels */
+    --fluid-step--1: clamp(0.9375rem, 0.9119rem + 0.1136vw, 1rem); 
+    /* 18 to 20 in pixels */
+    --fluid-step-0: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem); 
+    /* 21.60 to 25 in pixels */
+    --fluid-step-1: clamp(1.35rem, 1.2631rem + 0.3864vw, 1.5625rem); 
+    /* 25.92 to 31.25 in pixels */
+    --fluid-step-2: clamp(1.62rem, 1.4837rem + 0.6057vw, 1.9531rem); 
+    /* 31.10 to 39.06 in pixels */
+    --fluid-step-3: clamp(1.944rem, 1.7405rem + 0.9044vw, 2.4414rem); 
+    /* 37.32 to 48.83 in pixels */
+    --fluid-step-4: clamp(2.3328rem, 2.0387rem + 1.3072vw, 3.0518rem); 
+    /* 44.79 to 61.04 in pixels */
+    --fluid-step-5: clamp(2.7994rem, 2.384rem + 1.8461vw, 3.8147rem); 
+    /* 53.75 to 76.29 in pixels */
+    --fluid-step-6: clamp(3.3592rem, 2.7828rem + 2.5621vw, 4.7684rem); 
+
+    /*  */
+
+    /* font-family */
+    --font-family-main: 'Inter', system-ui, sans-serif;
+
+    /* font-size */
+    --font-size-xs: var(--fluid-step--2);
+    --font-size-sm: var(--fluid-step-0);
+    --font-size-md: var(--fluid-step-3);
+    --font-size-lg: var(--fluid-step-4);
+    --font-size-xl: var(--fluid-step-6);
+
+    /* font-weight */
+    --font-weight-xs: 400;
+    --font-weight-sm: 450;
+    --font-weight-md: 500;
+    --font-weight-lg: 550;
+
+    /* line-height */
+    --font-line-xs: 1;
+    --font-line-sm: 1.1;
+    --font-line-md: 1.2;
+    --font-line-lg: 1.4;
+
+    /* letter-spacing */
+    --font-ltr-narrow: -0.02em; /* -1x to -1.5px */
+
+  }
+
+
+
+/* 06. links
+=== === === === === === === === === === === === */
+
+  :root {
+    
+  }
+
+
+
+/* 07. buttons
+=== === === === === === === === === === === === */
+
+  :root {
+    
+  }
+
+
+
+/* 08. border
+=== === === === === === === === === === === === */
+
+  :root { 
+    
+    --border-none: 0;
+    --border-sm: 1rem;
+    --border-md: .125rem; /* 1.5px */
+    
+  }
+
+
+
+/* 09. transition
+=== === === === === === === === === === === === */
+
+  :root {
+    
+    /* timing */
+    --trans-timing-light: ease-out;
+    --trans-timing-normal: ease-out;
+    --trans-timing-heavy: ease-in;
+
+    /* duration */
+    --trans-duration-snap: 30ms;
+    --trans-duration-normal: 120ms;
+    --trans-duration-slow: 300ms;
+
+  }
+
+
+
+/* 10. animation
+=== === === === === === === === === === === === */
+
+  :root {
+    
+  }

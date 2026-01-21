@@ -1,0 +1,427 @@
+/*
+  hi you! 🙌
+  welcome to my humble journey of always learning. feel free to copy-edit-paste as you like. let me know if you find something useful, helpful. i do my best to cite origins of ideas and approaches that are not mine. 
+  best, raigo!
+
+  hi@raigo.design
+  2026
+
+  —
+
+  appreciated resources:
+  - svg clean-up: https://svgomg.net/ 
+  - svg to data64 converter: https://www.svgviewer.dev/svg-to-data-uri 
+  - favicon creator: https://realfavicongenerator.net/ 
+  - png to webp converter: https://towebp.io/
+  
+*/
+
+
+
+/* content list
+=== === === === === === === === === === === === 
+
+  - 01. layout
+  – 02. typography
+  – 03. links
+  – 04. buttons
+  – 05. forms
+  – 06. lists
+
+  - 05. header & navigation
+  - 06. main 
+  - 07. footer
+
+  – 08. scaling / breakpoints
+
+  ! also have a look at 'tokens.css'
+
+*/
+
+
+
+/* layout / spacing
+=== === === === === === === === === === === === */
+
+body {
+  background-color: var(--col-bg-page-light);
+}
+
+.guides,
+header,
+section,
+footer {
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+}
+
+/* typography
+=== === === === === === === === === === === === */
+
+body, h1, h2, h3, h4, h5, h6, p,
+figure, blockquote, dl, dd, a {
+  font-family: "Inter", sans-serif;
+  font-weight: var(--font-weight-sm);
+  font-optical-sizing: auto;
+  color: var(--col-txt-primary);
+}
+
+/* to improve text wrapping */
+h1, h2, h3, h4 { 
+  text-wrap: balance; 
+} 
+
+/* headings, titles */
+h1 {
+  margin-left: -3px;
+  font-size: var(--font-size-xl);
+  line-height: var(--font-line-sm);
+  letter-spacing: var(--font-ltr-narrow);
+}
+h2 {
+  font-size: var(--font-size-lg);
+  line-height: var(--font-line-md);
+  letter-spacing: var(--font-ltr-narrow);
+}
+h3 {
+  font-size: var(--font-size-md);
+  line-height: var(--font-line-md);
+  letter-spacing: var(--font-ltr-narrow);
+}
+h4 {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-lg);
+  line-height: var(--font-line-lg);
+}
+
+/* body */
+p, a { 
+  font-size: var(--font-size-sm); 
+  text-wrap: pretty; /* to improve text wrapping */
+}
+p,
+p a {
+  line-height: var(--font-line-lg);
+}
+a p,
+p a {
+  display: inline-flex;
+  color: var(--col-link-txt-default);
+  box-shadow: 0 1px 0 0 var(--col-link-border-default);
+}
+a:hover p,
+p a:hover {
+  color: var(--col-link-txt-hover);
+  box-shadow: 0 1px 0 0 var(--col-link-border-hover); /* offset-x | offset-y | blur | spread | color */
+}
+a:active p,
+p a:active {
+  color: var(--col-link-txt-active);
+  box-shadow: 0 1px 0 0 var(--col-link-border-active);
+}
+
+
+
+/* header & navigation
+=== === === === === === === === === === === === */
+
+header {
+  padding-top: var(--space-fluid-18);
+  padding-bottom: var(--space-fluid-36);
+}
+
+nav {
+  margin-bottom: var(--space-fluid-36);
+}
+nav > * {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* logo */
+.logo-raigo {
+  position: relative;
+  width: 100%;
+  height: 1.625rem;
+}
+.logo-raigo svg {
+  fill: var(--col-neutral-900);
+}
+.logo-raigo:hover svg {
+  fill: var(--col-neutral-600);
+}
+.logo-rai-min,
+.logo-rai-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 1.625rem;
+  fill: var(--col-neutral-900);
+  transition: opacity var(--trans-duration-normal) ease-out var(--trans-duration-slow), visibility var(--trans-duration-normal) ease-out var(--trans-duration-slow); /* property duration timing-function delay */
+}
+.logo-rai-min {
+  margin-top: .03125rem;
+  opacity: 1;
+  visibility: visible;
+}
+.logo-rai-full {
+  opacity: 0;
+  visibility: hidden;
+}
+@media only screen and (min-width: 26.5rem) {
+  .logo-rai-min {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .logo-rai-full {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+/* navigation links */
+.nav-link-group {
+  display: flex;
+  gap: var(--space-fluid-6);
+}
+.nav-link {
+  padding-bottom: .375rem;
+}
+
+.head-msg {
+  width: 100%
+}
+.head-msg-txt {
+  width: 100%;
+}
+.head-msg-txt h1 {
+  margin-bottom: var(--space-fluid-9);
+}
+@media only screen and (min-width: 50rem) {
+  .head-msg-txt {
+    width: calc(100% / 12 * 10); /* covering 10 column width */
+  }
+}
+
+
+
+
+/* main
+=== === === === === === === === === === === === */
+
+/* cta-ending */
+.cta-ending {
+  padding-top: var(--space-fluid-36);
+  padding-bottom: var(--space-fluid-36);
+}
+.cta-ending h3 {
+  margin-bottom: var(--space-fluid-9);
+}
+.cta-ending-buttons {
+  display: flex;
+  gap: var(--space-3);
+}
+@media only screen and (min-width: 50rem) {  
+  .cta-ending h3 {
+    width: calc(100% / 12 * 8);
+  }
+}
+
+
+
+/* 07. footer
+=== === === === === === === === === === === === */
+
+footer {
+  padding-bottom: var(--space-fluid-18);
+}
+footer > * {
+  display: flex;
+  flex-direction: column;
+}
+footer > * > :nth-child(1) {
+  margin-bottom: var(--space-3);
+}
+footer .nav-link {
+  margin-bottom: var(--space-2);
+}
+footer .nav-link:last-child {
+  margin-bottom: 0;
+}
+footer .nav-link-group {
+  flex-direction: column;
+}
+@media only screen and (min-width: 26.5rem) {
+  footer > * {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer > * > :nth-child(1),
+  footer .nav-link {
+    margin-bottom: 0;
+  }
+  footer .nav-link-group {
+    flex-direction: row;
+  }
+}
+
+
+/* utility
+=== === === === === === === === === === === === */
+
+.wrap-wide {
+  width: 100%;
+  
+}
+.wrap-regular {
+  max-width: calc(75rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* 04. buttons
+=== === === === === === === === === === === === */
+
+button,
+a.btn {
+  display: inline-flex;
+  align-items: center;
+  height: clamp(3rem, 2.9489rem + 0.2273vw, 3.125rem);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-sm);
+  line-height: var(--font-line-xs);
+  border-radius: var(--rad-base);
+  text-decoration: none;
+}
+
+/* primary */
+.btn-primary {
+  background-color: var(--col-action-primary-bg-default);
+  color: var(--col-action-primary-txt-default);
+}
+.btn-primary:hover {  
+  background-color: var(--col-action-primary-bg-hover);
+  /* scale: .975; */
+}
+
+/* secondary */
+.btn-secondary {
+  background-color: var(--col-action-secondary-bg-default);
+  color: var(--col-action-secondary-txt-default);
+}
+.btn-secondary:hover {  
+  background-color: var(--col-action-secondary-bg-hover);
+  /* scale: .975; */
+}
+
+
+/* 05. forms
+=== === === === === === === === === === === === */
+
+
+
+
+
+
+
+
+
+
+/* TEMP other
+=== === === === === === === === === === === === */
+
+.parent-radius {
+  border-radius: calc(var(--rad-base) + (var(--padding-parent) / 2));
+}
+
+
+.testing-relative-colours {
+  display: flex;
+  gap: 0;
+}
+.testing-relative-colours ul {
+  width: 100%;
+}
+.testing-relative-colours li {
+  /* width: 1rem; */
+  height: 1rem;
+  padding: 1rem;
+  font-size: var(--font-size-xs);
+  color: var(--col-neutral-900);
+}
+
+/* neutrals */
+.testing-relative-colours .neutrals li.box-01 {
+  background-color: var(--col-neutral-0);
+}
+.testing-relative-colours .neutrals li.box-02 {
+  background-color: var(--col-neutral-50);
+}
+.testing-relative-colours .neutrals li.box-03 {
+  background-color: var(--col-neutral-100);
+}
+.testing-relative-colours .neutrals li.box-04 {
+  background-color: var(--col-neutral-200);
+}
+.testing-relative-colours .neutrals li.box-05 {
+  background-color: var(--col-neutral-300);
+}
+.testing-relative-colours .neutrals li.box-06 {
+  background-color: var(--col-neutral-400);
+}
+.testing-relative-colours .neutrals li.box-07 {
+  background-color: var(--col-neutral-500);
+}
+.testing-relative-colours .neutrals li.box-08 {
+  background-color: var(--col-neutral-600);
+}
+.testing-relative-colours .neutrals li.box-09 {
+  background-color: var(--col-neutral-700);
+}
+.testing-relative-colours .neutrals li.box-10 {
+  background-color: var(--col-neutral-800);
+}
+.testing-relative-colours .neutrals li.box-11 {
+  background-color: var(--col-neutral-900);
+}
+
+/* accent */
+.testing-relative-colours .accent li.box-01 {
+  background-color: var(--col-accent-0);
+}
+.testing-relative-colours .accent li.box-02 {
+  background-color: var(--col-accent-50);
+}
+.testing-relative-colours .accent li.box-03 {
+  background-color: var(--col-accent-100);
+}
+.testing-relative-colours .accent li.box-04 {
+  background-color: var(--col-accent-200);
+}
+.testing-relative-colours .accent li.box-05 {
+  background-color: var(--col-accent-300);
+}
+.testing-relative-colours .accent li.box-06 {
+  background-color: var(--col-accent-400);
+}
+.testing-relative-colours .accent li.box-07 {
+  background-color: var(--col-accent-500);
+}
+.testing-relative-colours .accent li.box-08 {
+  background-color: var(--col-accent-600);
+}
+.testing-relative-colours .accent li.box-09 {
+  background-color: var(--col-accent-700);
+}
+.testing-relative-colours .accent li.box-10 {
+  background-color: var(--col-accent-800);
+}
+.testing-relative-colours .accent li.box-11 {
+  background-color: var(--col-accent-900);
+}

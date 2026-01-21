@@ -1,0 +1,136 @@
+/*
+  hi you! 🙌
+  welcome to my humble journey of always learning. feel free to copy-edit-paste as you like. let me know if you find something useful, helpful. i do my best to cite origins of ideas and approaches that are not mine. 
+  best, raigo!
+
+  hi@raigo.design
+  2026
+
+  —
+
+  appreciated resources:
+  - reset by Andy Bell that surfaced form llm chat (i've edited it a bit though)
+    - article: https://piccalil.li/blog/a-more-modern-css-reset
+    - in github: https://gist.github.com/Asjas/4b0736108d56197fce0ec9068145b421
+  
+*/
+
+
+
+/* andy bell reset (with minor adjustments)
+=== === === === === === === === === === === === */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+  margin: 0; /* added — better element and typography control */
+  padding: 0; /* added — better element and typography control */
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* adding default list styling strip, as less used */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  padding-top: 0.1px;  /* added — tiny value breaks collapse without visible gap */
+  /* line-height: 1.5; */
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input { /* optionally can add 'label' */
+  /* line-height: 1.1; */
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+
+/* addition
+=== === === === === === === === === === === === */
+
+/* improved text rendering in most browsers */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* to avoid stretching */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* keeping keyboard focus visible while avoiding 'double outlines' on mouse click in browsers that support ':focus-visible' */
+:focus:not(:focus-visible) { 
+  outline: none; 
+}
+
+/* baselining focus state styling */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* keep focus visibility under high contrast mode (think windows) */
+@media (forced-colors: active) {
+  :focus-visible { 
+    outline: 2px solid Highlight; 
+  }
+}
+
+/* remove default underline for links. will have custom underline (look 'basics.css') */
+a { 
+  text-decoration: none;
+}
+

@@ -1,0 +1,125 @@
+/*
+  hi you! 🙌
+  welcome to my humble journey of always learning. feel free to copy-edit-paste as you like. let me know if you find something useful, helpful. i do my best to cite origins of ideas and approaches that are not mine. 
+  best, raigo!
+
+  hi@raigo.design
+  2026
+
+  —
+
+  appreciated resources:
+  - svg clean-up: https://svgomg.net/ 
+  - svg to data64 converter: https://www.svgviewer.dev/svg-to-data-uri 
+  - favicon creator: https://realfavicongenerator.net/ 
+  - png to webp converter: https://towebp.io/
+
+*/
+
+
+
+/* content list
+=== === === === === === === === === === === === 
+
+  - 01. layout
+  – 02. typography
+  – 03. links
+  – 04. buttons
+  – 05. forms
+  – 06. lists
+
+  - 05. header & navigation
+  - 06. main 
+  - 07. footer
+
+  – 08. scaling / breakpoints
+
+  ! also have a look at 'tokens.css'
+
+*/
+
+
+
+/* 01. layout / spacing
+=== === === === === === === === === === === === */
+
+
+
+
+/* 05. header & navigation
+=== === === === === === === === === === === === */
+
+header {
+  padding-bottom: 0;
+  margin-bottom: var(--space-fluid-18);
+}
+
+.head-msg .wrap-regular {
+  display: flex;
+  justify-content: space-between;
+  gap: calc(100% / 12 * 1);
+}
+.head-msg-txt h1 {
+  margin-bottom: var(--space-3);
+}
+.head-msg-links {
+  display: flex;
+  gap: var(--space-3);
+}
+
+
+
+/* 06. main
+=== === === === === === === === === === === === */
+
+.problem .wrap-regular,
+.approach .wrap-regular {
+  display: flex;
+}
+.problem .title,
+.approach .title {
+  width: calc(100% / 12 * 3);
+}
+.title p {
+  font-weight: var(--font-weight-lg);
+}
+.problem .list,
+.approach .list {
+  width: calc(100% / 12 * 6);
+}
+
+/* hero image */
+.hero-image {
+  padding-top: var(--space-fluid-18);
+  background-color: var(--col-surface-tertiary);
+}
+.hero-image img {
+  margin-bottom: var(--space-fluid-18);
+  border-top-left-radius: var(--rad-base);
+  border-top-right-radius: var(--rad-base);
+}
+
+/* case-intro */
+.intro {
+  margin-bottom: var(--space-fluid-36);
+}
+@media only screen and (min-width: 50rem) {  
+  .intro h3 {
+    width: calc(100% / 12 * 8);
+  }
+}
+
+/* problem */
+.problem {
+  margin-bottom: var(--space-fluid-18);
+}
+.problem-images {
+  height: 10rem; /* TEMPORARY */
+  margin-bottom: var(--space-fluid-36);
+  background-color: var(--col-surface-tertiary);
+}
+
+/* approach */
+.approach {
+  margin-bottom: var(--space-fluid-18);
+}
