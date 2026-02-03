@@ -5,8 +5,7 @@
   },
   "urls": [
     "http://localhost:8080/index.html",
-    "http://localhost:8080/case-entringo-traffic",
-    "http://localhost:8080/case-jiwambe",
-    "http://localhost:8080/case-polar-explorer"
+    "http://localhost:8080/case-studies",
+    "http://localhost:8080/projects"
   ]
 }
