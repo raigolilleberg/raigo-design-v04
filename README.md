@@ -1,11 +1,10 @@
-# raigo.design — 2026 refresh
+# www.raigo.design / v04
 
-Personal site rebuild focused on semantic HTML, accessible patterns, and clean CSS architecture.
+Re-design and rebuild of my personal-professional website—www.raigo.design.  
 
 ## Goals
-- Semantic structure + accessible interactions
-- Tokenized CSS (colors, type, spacing)
-- Progressive enhancement in JS
-
-## Run locally
-Open `index.html` or serve with a local static server.
+- Simplified and focused overview of my professional background
+- Improved case study walkthroughs with better context
+- Improved projects list overview with more context and more supporting material
+- Practise industry best practises in html/css/js coding (semantic structure, tokens, progressive enhancement etc)
+- Demonstrate my design engineering path
