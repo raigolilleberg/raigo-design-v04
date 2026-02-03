@@ -1,0 +1,437 @@
+
+
+/* RESET */
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, img, p,blockquote, ol, ul, li, form, fieldset, legend, label, table, header, footer, nav, section, figure {margin: 0; padding: 0; }
+ol, ul {list-style: none; }
+table {border-collapse: collapse;border-spacing: 0; }
+fieldset {border: 0;}
+img {border: 0;display: block;}
+html, body, div, h1, h2, h3 {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+/* RESET fin */
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+@media screen, print {
+
+	body {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		word-wrap: break-word;
+		background-color: #fafafb;
+	}
+	@page {
+		size: portrait;
+		margin: 0;
+	}
+	.page-break	{ 
+		display: block; 
+		page-break-before: always; 
+	}
+	h1, h2, h3 {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 400;
+	}
+	h1 {
+		font-size: 95px;
+		text-transform: uppercase;
+		margin-left: -3px;
+	}
+	h2 {
+		font-size: 55px;
+	}
+	h3 {
+		font-size: 21px;
+	}
+	h4 {
+		font-size: 12px;
+		font-weight: 300;
+	}
+
+	.a4 {
+/*		width: 595pt;
+		height: 841pt;*/
+		width: 8.3in;
+		height: 11.72in;
+		margin: 0 auto;
+		overflow: auto;
+		position: relative;
+	}
+
+	.esileht {
+		
+	}
+		.esi-pealk, .esi-pealk-pisi {
+			text-align: center;
+			color: #fff;
+		}
+
+		.esi-pealk {
+			margin-top: 375px;
+			margin-bottom: 10px;
+		}
+		.esi-pealk-pisi {
+			margin-bottom: 50px;
+		}
+		.muster {
+			width: 100%;
+			overflow: hidden;
+		}
+			.muster-pic {
+				background: url(pildid/muster.svg);
+				background-repeat: no-repeat;
+				background-size: 170%;
+				height: 136pt;
+				width: 100%;
+				opacity: 0.15;
+			}
+			.esileht .muster .muster-pic:nth-child(2) {
+				background-position: 5% 0%;
+			}
+
+		.esi-logo {
+			width: 150px;
+			background-color: #ddd;
+			margin: 0 auto;
+			margin-top: 50px;
+		}
+		.esi-logo img {
+			width: 100%;
+		}
+
+	.sisukord {
+		
+	}
+		.sisuk-list {
+			font-size: 16px;
+			line-height: 1.4;
+		}
+		.sisuk-list, .sisuk-list a {
+			text-decoration: none;
+		}
+		.sisuk-list ul {
+			overflow-x: hidden;
+		}
+		.sisuk-list li {
+			
+		}
+		.sisuk-list li:after {
+			float: left;
+			width: 0;
+			white-space: nowrap;
+			content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+		}
+			.sisuk-list li span {
+				
+			}
+			.sisuk-list li span:first-child {
+				padding-right: 10px;
+				background: #fafafb;
+/*				white-space: pre;*/
+				margin-right: 5%;
+			}
+			.sisuk-list li span + span {
+			    float: right;
+			    padding-left: 10px;
+			    background: #fafafb;
+			    position: relative;
+			    z-index: 1
+			}
+
+	.sisuleht {
+
+	}
+		.sisuleht-box {
+
+		}
+		.sisuleht-box h3 {
+			padding: 40px 0 20px 0;
+		}
+		.sisuleht-sisu-txt {
+			line-height: 1.4;
+		}
+		.sisuleht-sisu-txt p {
+			font-weight: 600;
+			margin-bottom: 12.5px;
+		}
+		.sisuleht-sisu-txt p:after {
+
+		}
+		.sisuleht-sisu-txt blockquote {
+			font-style: italic;
+			font-family: 'times', serif;
+			font-size: 13px;
+			line-height: 1.2;
+			background-color: #e2e2e2;		
+			padding: 12.5px;
+			margin: 12.5px 0;
+		}
+		.sisuleht-sisu-txt ul, .mini-copy ul {
+			list-style-type: disc;
+			padding-left: 15px;
+		}
+		.mini-copy ul {
+			list-style-type:  square;
+		}
+		.sisuleht-sisu-txt li span, .mini-copy li span {
+			color: #000;
+		}
+
+		.sisuk-list, .sisuleht-box {
+			padding: 0 60px;
+		}
+		.sisuk-list {
+			padding-top: 40px;
+		}
+		.mini-copy {
+			font-size: 10px;
+			font-style: italic;
+			position: absolute;
+			bottom: 33px;
+			width: 85%;
+		}
+
+		.sisuleht-box img {
+			width: 100%;
+			margin-bottom: 30px;
+		}
+
+	.col2, .col3 {
+		-moz-column-gap: 10px;
+		-webkit-column-gap: 10px;
+		column-gap: 10px;
+	}
+	.col2 {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+	.col3 {
+		-moz-column-count: 3;
+		-webkit-column-count: 3;
+		column-count: 3;
+	}
+
+	.head, .head2 {
+		position: relative;
+		width: 100%;
+		color: #fff;
+		overflow: hidden;
+	}
+	.head {
+		height: 280px;
+	}
+	.head2 {
+		height: 90px;
+	}
+		.head img {
+			width: 100%;
+		}
+		.head-txt, .head2-txt {
+			position: absolute;
+			bottom: 0;
+			padding-top: 102px;
+			width: 100%;
+		}
+		.head-txt h1, .head-txt h3, .head2-txt h1, .head2-txt h3, .foot-pealk h3 {
+			padding-left: 60px;
+			padding-right: 60px;
+			width: 100%;
+		}
+		.head-txt h1, .head2-txt h1 {
+			line-height: 0.77;
+		}
+		.head-txt h3, .head2-txt h3 {
+			padding-top: 11px;
+		}
+		.head2-txt h1 {
+			font-size: 55px;
+		}
+		.head2-txt h3 {
+			background-color: transparent;
+		}
+
+	.footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+	.foot-pealk {
+
+	}
+	.footer-box {
+		height: 217px;
+	}
+		.footer-info {
+			padding: 40px 60px;
+			color: #fff;
+			font-weight: 600;
+			line-height: 1.4;
+		}
+		.footer-info li {
+			float: left;
+			width: 33%;
+		}
+
+	.lk-nr {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 28px;
+		height: 44px;
+		background-color: #e2e2e2;
+		text-align: center;
+	}
+	.lk-nr h4 {
+		padding-top: 60%;
+	}
+
+	.tabel-box {
+		width: 100%;
+		table-layout: fixed;
+	}
+		.tabel {
+			overflow: hidden;
+			border-bottom: 2px solid #fff; 
+		}
+		.tabel td {
+			box-sizing: border-box;
+			width: 20%;
+			height: 100%;
+			text-align: right;
+			padding: 8px 8px;
+			border-right: 2px solid #fff; 
+			vertical-align: middle;
+			word-wrap:break-word;
+		}
+
+		.tabel-box .tabel:nth-child(even) td {
+			background-color: #d6d6d6;
+		}
+		.tabel-box .tabel:nth-child(odd) td {
+			background-color: #e2e2e2;
+		}
+
+	.tabel-clear-fix {
+		clear: both;
+		margin-bottom: 20px;
+	}
+	.tabel-box .tabel:first-child td {
+		font-weight: 900;
+		color: #fff;
+		text-align: left;
+	}
+	.tabel-box .tabel td:first-child {
+		text-align: left;
+	}
+	.tabel-box .tabel td:last-child {
+		border-right: none;
+	}
+
+
+	.varvid-box {
+		height: 100%;
+		padding-top: 50%;
+	}
+		.varvid-box li {
+			width: 240px;
+			height: 22px;
+			margin: 0 auto;
+			margin-bottom: 10px;
+		}
+		.varvid-box li:last-child {
+			margin-bottom: 0;
+		}
+
+/* Erinevad värvid / PDF's olevas järjekorras */	
+		.varvid-box li:nth-child(1) {
+			background-color: #004d74;
+		}
+		.varvid-box li:nth-child(2) {
+			background-color: #43a48d;
+		}
+		.varvid-box li:nth-child(3) {
+			background-color: #c79650;
+		}
+		.varvid-box li:nth-child(4) {
+			background-color: #b92c26;
+		}
+		.varvid-box li:nth-child(5) {
+			background-color: #4c99b2;
+		}
+		.varvid-box li:nth-child(6) {
+			background-color: #ccb32d;
+		}
+		.varvid-box li:nth-child(7) {
+			background-color: #86758d;
+		}
+		.varvid-box li:nth-child(8) {
+			background-color: #785039;
+		}
+		.varvid-box li:nth-child(9) {
+			background-color: #afb17f;
+		}
+		.varvid-box li:nth-child(10) {
+			background-color: #085234;
+		}
+
+	/*	teksti värv	*/
+	.txt-colr-head, .txt-colr-sisu-pealk, .txt-colr-sisu-intro, .txt-colr-sisu-quote, .sisuk-list, .sisuk-list a, .colr-bullets li, .foot-pealk h3 {
+		color:#004d74;
+	}
+	/*	tausta värv	*/
+	.esileht, .head, .head2, .head-txt h3, .head2-txt h3, .colr-tabel-head, .tabel-box .tabel:first-child td, .footer-box {
+		background-color: #004d74 !important;
+	}
+
+/* /// */
+
+
+/* Siit saad muuta päises olevat blokki */	
+	.no-print {
+		width: 100%;
+		height: 10em;
+		background: green;
+		text-align: center;
+		padding-top: 20px;
+		color: #fff; 
+	}
+/* /// */
+
+}
+
+
+@media print {
+
+/* See keelab printides päises oleva bloki kuvamise */	
+	.no-print {
+		display: none;
+	}
+/* /// */
+
+}
+
+
+/* IE 10+ mõistab all olevat. Print päris hästi kõike ei mõista, nt SVG background position osa */
+
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+		.head-txt h1 {
+			margin-bottom: -4px;
+		}
+		.a4 {
+			height: 11.68in;
+		}
+		.muster-pic, .esileht .muster :nth-child(2).muster-pic {
+			background-position-y: 50%;
+		}
+
+	 }
+
+ /* /// */

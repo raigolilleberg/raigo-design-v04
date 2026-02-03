@@ -1,0 +1,987 @@
+<!-- 
+  hi you! 🙌
+  welcome to my humble journey of always learning. feel free to copy-edit-paste as you like. let me know if you find something useful, helpful. i do my best to cite origins of ideas and approaches that are not mine. 
+  best, raigo!
+
+  hi@raigo.design
+  2026
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- basics
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Raigo / Projects</title>
+  <meta name="description" content="Selected projects since 2014.">  
+  <meta name="author" content="Raigo Lilleberg">
+  <!-- <meta name="keywords" content=""> -->
+
+  <!-- mobile
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.raigo.design/_img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.raigo.design/_img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.raigo.design/_img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="https://www.raigo.design/_img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="https://www.raigo.design/_img/favicon/safari-pinned-tab.svg" color="#1B1C17">
+  <meta name="msapplication-TileColor" content="#FAFAFA">
+  <meta name="theme-color" content="#FAFAFA">
+
+  <!-- external font
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <!-- css
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="../_styl/reset.css">
+  <link rel="stylesheet" href="../_styl/tokens.css">
+  <link rel="stylesheet" href="../_styl/basic.css">
+  <link rel="stylesheet" href="../_styl/projects.css">
+
+  <!-- contentsquare (hotjar) tracking
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:4977038,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+</head>
+<body>
+
+  <!-- content
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <header>
+
+    <nav>
+      <div class="wrap-regular">
+        <!-- logo -->
+        <a href="https://www.raigo.design/" class="logo-raigo">
+          <!-- logo compressed -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 26" fill="" class="logo-rai-min"><path fill="#" d="M45.043 0h4.959v24h-4.959V0ZM20.66 24h5.242l6.105-17.47L37.95 24h5.437L34.89 0h-5.665L20.66 24ZM10.066 14.798H4.895V24H0V0h11.757c1.68.033 2.97.239 3.87.619.911.38 1.681.939 2.31 1.677.52.608.932 1.28 1.236 2.019.303.738.455 1.58.455 2.524 0 1.14-.287 2.263-.862 3.37-.574 1.096-1.523 1.872-2.846 2.328 1.106.445 1.887 1.08 2.342 1.905.466.814.7 2.063.7 3.745V24h-5.01v-3.354l-.032-2.022c-.021-1.53-.303-2.551-.845-3.061-.532-.51-1.534-.765-3.009-.765Zm3.041-4.573c.998-.456 1.496-1.357 1.496-2.703 0-1.454-.482-2.431-1.447-2.93-.542-.283-1.355-.424-2.44-.424H4.896v6.448h5.675c1.128 0 1.973-.13 2.537-.39Z"/></svg>
+          <!-- logo full size -->
+           <svg xmlns="http://www.w3.org/2000/svg" width="101" height="26" fill="" class="logo-rai-full"><path fill="#" d="M88.956 25.241c-3.42 0-6.033-.927-7.84-2.783-2.424-2.276-3.635-5.555-3.635-9.837 0-4.369 1.211-7.648 3.635-9.838C82.923.928 85.536 0 88.956 0c3.419 0 6.032.928 7.839 2.783 2.413 2.19 3.619 5.469 3.619 9.838 0 4.282-1.206 7.561-3.62 9.837-1.806 1.856-4.42 2.783-7.838 2.783Zm4.723-6.407c1.157-1.456 1.736-3.527 1.736-6.213 0-2.675-.584-4.741-1.753-6.197-1.157-1.467-2.726-2.2-4.707-2.2-1.98 0-3.56.727-4.739 2.183-1.18 1.457-1.769 3.528-1.769 6.214 0 2.686.59 4.757 1.77 6.213 1.179 1.456 2.758 2.184 4.739 2.184 1.98 0 3.554-.728 4.723-2.184ZM68.508 24.02c-1.337.814-2.98 1.221-4.932 1.221-3.21 0-5.84-1.1-7.89-3.303-2.137-2.214-3.206-5.24-3.206-9.081 0-3.884 1.08-6.998 3.239-9.342C57.878 1.172 60.733 0 64.283 0c3.08 0 5.551.776 7.414 2.327 1.874 1.54 2.948 3.467 3.222 5.778h-4.98c-.384-1.639-1.321-2.783-2.812-3.434-.833-.358-1.759-.537-2.778-.537-1.95 0-3.556.732-4.816 2.197-1.25 1.454-1.874 3.645-1.874 6.574 0 2.952.679 5.04 2.038 6.266 1.359 1.226 2.904 1.84 4.636 1.84 1.698 0 3.09-.484 4.175-1.45 1.085-.976 1.753-2.25 2.005-3.824h-5.605v-4.003H75v12.873H70.93v-2.578c-.976 1.14-1.644 1.525-2.422 1.992ZM45.043.62h4.959v24h-4.959v-24ZM20.66 24.62h5.242l6.105-17.469 5.943 17.47h5.437L34.89.62h-5.665l-8.564 24ZM10.066 15.418H4.895v9.203H0v-24h11.757c1.68.032 2.97.238 3.87.618.911.38 1.681.94 2.31 1.677.52.608.932 1.281 1.236 2.02.303.738.455 1.579.455 2.523 0 1.14-.287 2.263-.862 3.37-.574 1.097-1.523 1.873-2.846 2.329 1.106.445 1.887 1.08 2.342 1.905.466.814.7 2.062.7 3.745v5.812h-5.01v-3.354l-.032-2.021c-.021-1.531-.303-2.551-.845-3.062-.532-.51-1.534-.765-3.009-.765Zm3.041-4.572c.998-.456 1.496-1.357 1.496-2.703 0-1.455-.482-2.431-1.447-2.93-.542-.283-1.355-.424-2.44-.424H4.896v6.448h5.675c1.128 0 1.973-.13 2.537-.391Z"/></svg>
+        </a>
+        <!-- nav links -->
+        <ul class="nav-link-group">
+          <li class="nav-link"><a href="https://www.raigo.design/case-studies" target="_blank"><p>Case studies</p></a></li>
+          <li class="nav-link"><a href="https://www.raigo.design/projects" target="_blank"><p>Projects</p></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- head message -->
+    <div class="head-msg">
+      <div class="wrap-regular">
+
+        <!-- text -->
+        <div class="head-msg-txt">
+          <h1>Projects</h1>
+          <p>Selected projects since 2014, sorted by most recent to older ones. Encouraged to explore the related materials and/or start with the master <a href="https://www.figma.com/design/f6KZ03vnYZBilrN9OByBdf/cases-2026?node-id=1-84&p=f&t=TijZMuycaZolp9yY-11" target="_blank">figma file</a>, for closer look of most of the projects listed—better experience on desktop.</p>
+        </div>
+
+      </div>
+    </div>
+    
+  </header>
+
+  <main>
+
+    <!-- project list
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section class="project-list">
+
+        <!-- jiwambe - system -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year">2026</p>
+            <p class="company">Jiwambe</p>
+            <p class="description">B2B financing platform. E-commerce redesign, design system, loan application flows.</p>
+            <ul class="nav-link-group">
+              <li class="nav-link"><a href="https://www.raigo.design/case-studies/jiwambe"><p>Case</p></a></li>
+              <li class="nav-link"><a href="" target="_blank"><p>System</p></a></li>
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>            
+        </div>
+
+        <!-- jiwambe - workflow -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year">2025</p>
+            <p class="company">Jiwambe</p>
+            <p class="description">Design operations. Establishing design function, Figma environment setup, brand refinement, design-dev workflow.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li> -->
+            </ul>
+          </div>            
+        </div>
+
+        <!-- esheria -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2025</p>
+            <p class="company">Esheria</p>
+            <p class="description">Brand identity. Brand repositioning, logo, visual system, website.</p>
+          </div>
+        </div>
+
+        <!-- clearspace -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year">2024</p>
+            <p class="company">Clearspace</p>
+            <p class="description">Consumer iOS app. Interface and experience redesign, design system. With <a href="https://iverson.inc/" target="_blank">Iverson</a>.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- primer -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2024</p>
+            <p class="company">Primer</p>
+            <p class="description">Educational web app. Interface and experience design for early school educators.</p>
+          </div>
+        </div>
+
+        <!-- polar explorer -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2024</p>
+            <p class="company">Polar explorer</p>
+            <p class="description">Tour booking system. Flow optimization, interface and experience design. With <a href="https://phidigital.eu/" target="_blank">PhiDigital</a>.</p>
+            <ul class="nav-link-group">
+              <li class="nav-link"><a href="https://www.raigo.design/case-studies/polar-explorer"><p>Case</p></a></li>
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- bowhead health - webapp -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2024</p>
+            <p class="company">Bowhead Health</p>
+            <p class="description">Health data platform. Audit, design consultation.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- bowhead health - pitch deck -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2024</p>
+            <p class="company">Bowhead Health</p>
+            <p class="description">Investor materials. Pitch deck.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- entringo traffic -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year">2023</p>
+            <p class="company">Entringo Traffic</p>
+            <p class="description">Municipal traffic management. Workflow optimization, navigation restructure, interface and experience design, design system.</p>
+            <ul class="nav-link-group">
+              <li class="nav-link"><a href="https://www.raigo.design/case-studies/entringo-traffic"><p>Case</p></a></li>
+              <li class="nav-link"><a href="" target="_blank"><p>System</p></a></li>
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- bowhead health - brand -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2023</p>
+            <p class="company">Bowhead Health</p>
+            <p class="description">Brand refinement. Consultation and guidance.</p>
+          </div>
+        </div>
+
+        <!-- knolte - manual -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2023</p>
+            <p class="company">Knolte</p>
+            <p class="description">Product manual design.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- nda -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2023</p>
+            <p class="company">Union Inevstment</p>
+            <p class="description">Investment dashboard. Interface design concept. With Denkwerk. With <a href="https://www.denkwerk.com/en/" target="_blank">Denkwerk</a>.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Prototype</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- f1 singapore gp -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year">2022</p>
+            <p class="company">F1 Singapore GP</p>
+            <p class="description">Ticketing system. Purchase flow optimization and interface concept.</p>
+            <ul class="nav-link-group">
+              <li class="nav-link"><a href="" target="_blank"><p>Prototype</p></a></li>
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- finviz -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2022</p>
+            <p class="company">FinViz</p>
+            <p class="description">Stock screening tool. Information architecture, interface concept.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- eu parliament -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2022</p>
+            <p class="company">EU Parliament</p>
+            <p class="description">Public website. Navigation redesign concept.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- vzug -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2022</p>
+            <p class="company">VZUG</p>
+            <p class="description">E-commerce site. Design system. With <a href="https://cdlx.de/" target="_blank">CDLX</a>.</p>
+          </div>
+        </div>
+
+        <!-- myocco -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year">2021</p>
+            <p class="company">MyOCCO</p>
+            <p class="description">E-commerce site. Audit, interface and experience redesign.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- aputure - ecommerce -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2021</p>
+            <p class="company">Aputure</p>
+            <p class="description">E-commerce site. Information architecture restructure, interface redesign, design system.</p>
+            <ul class="nav-link-group">
+              <li class="nav-link"><a href="" target="_blank"><p>System</p></a></li>
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- knolte - web -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2021</p>
+            <p class="company">Knolte</p>
+            <p class="description">E-commerce site. Interface design. With <a href="https://lavii.ee/" target="_blank">Lavii</a>.</p>
+            <ul class="nav-link-group">
+              <li class="nav-link"><a href="" target="_blank"><p>System</p></a></li>
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- knolte - brand -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2021</p>
+            <p class="company">Knolte</p>
+            <p class="description">Brand identity. Logo, visual system.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- metaview -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2021</p>
+            <p class="company">Metaview</p>
+            <p class="description">Employee onboarding. Communication design.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- vidiom - app -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2021</p>
+            <p class="company">Vidiom</p>
+            <p class="description">Consumer mobile app. Audit, interface and experience redesign.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- vidiom - deck -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2021</p>
+            <p class="company">Vidiom</p>
+            <p class="description">Investor materials. Pitch deck.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- open hpi -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2021</p>
+            <p class="company">openHPI</p>
+            <p class="description">Educational website. Interface redesign concept. With <a href="https://cdlx.de/" target="_blank">CDLX</a>.</p>
+            <ul class="nav-link-group">
+              <li class="nav-link"><a href="" target="_blank"><p>System</p></a></li>
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- söön -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2021</p>
+            <p class="company">SÖÖN</p>
+            <p class="description">Consumer mobile app. Onboarding flow concept.</p>
+            <ul class="nav-link-group">
+              <li class="nav-link"><a href="" target="_blank"><p>Prototype</p></a></li>
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- turunduslabor -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year">2020</p>
+            <p class="company">Turunduslabor</p>
+            <p class="description">Brand identity. Logo, pitch deck.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- sharpist -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2020</p>
+            <p class="company">Sharpist</p>
+            <p class="description">Coaching web app. Interface, experience design and cross-platform design system (web, mobile).</p>
+            <ul class="nav-link-group">
+              <li class="nav-link"><a href="" target="_blank"><p>System</p></a></li>
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- profysio - booking -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2020</p>
+            <p class="company">Profysio</p>
+            <p class="description">Booking system. Structure, flow, interface and experience design from ground up.</p>
+            <ul class="nav-link-group">
+              <li class="nav-link"><a href="" target="_blank"><p>System</p></a></li>
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- isachamp -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2020</p>
+            <p class="company">Isachamp</p>
+            <p class="description">Investor materials. Pitch deck.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- isachamp -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2020</p>
+            <p class="company">Isachamp</p>
+            <p class="description">Brand identity. Logo, website.</p>
+            <ul class="nav-link-group">
+              <li class="nav-link"><a href="" target="_blank"><p>System</p></a></li>
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- unlock -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2020</p>
+            <p class="company">Unlock</p>
+            <p class="description">Company website. Interface design.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- unlock -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2020</p>
+            <p class="company">Unlock</p>
+            <p class="description">Investor materials. Pitch deck.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- profysio - web -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year">2019</p>
+            <p class="company">Profysio</p>
+            <p class="description">Clinic website. Interface redesign, brand refinement.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- lift99 -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2019</p>
+            <p class="company">Lift99</p>
+            <p class="description">Coworking brand. Strategy consultation.</p>
+          </div>
+        </div>
+
+        <!-- port of tallinn -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2019</p>
+            <p class="company">Port of Tallinn</p>
+            <p class="description">B2C web app for port services. Interface design at <a href="https://nortal.com/" target="_blank">Nortal</a>.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- utilitas -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2019</p>
+            <p class="company">Utilitas</p>
+            <p class="description">B2C energy consumption app. Interface design at <a href="https://nortal.com/" target="_blank">Nortal</a>.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- aputure - web -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2019</p>
+            <p class="company">Aputure</p>
+            <p class="description">E-commerce website. Interface redesign. With <a href="https://phidigital.eu/" target="_blank">PhiDigital</a>.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- digilugu -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2019</p>
+            <p class="company">Digilugu</p>
+            <p class="description">Patient portal. Interface and experience design concept at <a href="https://nortal.com/" target="_blank">Nortal</a>.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- hea kodanik -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year">2018</p>
+            <p class="company">Hea Kodanik</p>
+            <p class="description">Civic engagement web app. Interface and experience redesign.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- weekendshoes -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2018</p>
+            <p class="company">WeekendShoes</p>
+            <p class="description">E-commerce site. Audit, consultation.</p>
+          </div>
+        </div>
+
+        <!-- porche -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2018</p>
+            <p class="company">Porche Next IO</p>
+            <p class="description">Marketing campaign. Website interface with <a href="https://www.high-mobility.com/" target="_blank">High Mobility</a>.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- high mobility -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year">2017</p>
+            <p class="company">High Mobility</p>
+            <p class="description">Automotive emulator. Web application interface and experience design.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- smart marine -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year">2017</p>
+            <p class="company">Smart Marine</p>
+            <p class="description">Brand identity, landing page (HTML/CSS).</p>
+            <ul class="nav-link-group">
+              <li class="nav-link"><a href="" target="_blank"><p>Demo</p></a></li>
+              <li class="nav-link"><a href="" target="_blank"><p>CVI</p></a></li>
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- weekendshoes -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2017</p>
+            <p class="company">WeekendShoes</p>
+            <p class="description">Brand identity. Logo.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- sayatme -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2017</p>
+            <p class="company">SayatMe</p>
+            <p class="description">Web application. Interface and experience design, pitch deck.</p>
+          </div>
+        </div>
+
+        <!-- wanderboss -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2017</p>
+            <p class="company">Wanderboss</p>
+            <p class="description">Brand identity. Visual concept.</p>
+          </div>
+        </div>
+
+        <!-- tai heaoluprofiil -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year">2016</p>
+            <p class="company">TAI Heaoluprofiil</p>
+            <p class="description">Health assessment web app. Audit, interface and experience redesign.</p>
+          </div>
+        </div>
+
+        <!-- paytailor -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2016</p>
+            <p class="company">Paytailor</p>
+            <p class="description">Payment mobile app. Interface refinement.</p>
+          </div>
+        </div>
+
+        <!-- trade2live -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2016</p>
+            <p class="company">Trade2Live</p>
+            <p class="description">Trading discussion platform. Key flows interface and experience design, component library.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- hektor lights -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2016</p>
+            <p class="company">Hekotr Lights</p>
+            <p class="description">E-commerce site. Audit, interface and experience concept.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- yourdesignworks -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2016</p>
+            <p class="company">YourDesignWorks</p>
+            <p class="description">Event branding. Visual identity, merchandise. With <a href="https://www.linkedin.com/in/helen-kokk-product-design-lead/" target="_blank">Helen Minařík</a>.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- zalando -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2016</p>
+            <p class="company">Zalando</p>
+            <p class="description">Marketing campaign. Website concept.</p>
+          </div>
+        </div>
+
+        <!-- sofasolutions -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2016</p>
+            <p class="company">SofaSolutions</p>
+            <p class="description">Travel blog. Website design.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- readems -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2016</p>
+            <p class="company">Readems</p>
+            <p class="description">Brand identity. Logo, website concept.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- südameapteek -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year">2015</p>
+            <p class="company">Südameapteek</p>
+            <p class="description">Pharmacy web application. Interface design with Ziraff.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- südameapteek -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2015</p>
+            <p class="company">Südameapteek</p>
+            <p class="description">Pharmacy website. Interface design with Ziraff.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- loverte -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2015</p>
+            <p class="company">Loverte</p>
+            <p class="description">Beauty e-commerce. Logo, marketing materials, packaging design.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- garage48 -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2015</p>
+            <p class="company">Garage48</p>
+            <p class="description">Event branding. Visual identity, merchandise.</p>
+          </div>
+        </div>
+
+        <!-- shepherd -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2015</p>
+            <p class="company">Shpeherd</p>
+            <p class="description">Brand identity. Logo.
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- sherpette -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2015</p>
+            <p class="company">Sherpette</p>
+            <p class="description">Mobile app. Interface and experience concept with <a href="https://www.linkedin.com/in/liispeetermann/" target="_blank">Liis Peetermann</a>.</p>
+          </div>
+        </div>
+
+        <!-- traffel -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2015</p>
+            <p class="company">Traffel</p>
+            <p class="description">Flight deal aggregator. Interface design with <a href="https://dux.ee/" target="_blank">DUX</a>.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- flex sülearvutid -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2015</p>
+            <p class="company">Flex Sülearvutid</p>
+            <p class="description">E-commerce site. Interface and experience redesign.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- stipit -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2015</p>
+            <p class="company">Stipit</p>
+            <p class="description">Brand identity. Logo.</p>
+          </div>
+        </div>
+
+        <!-- tabletennis11 -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2015</p>
+            <p class="company">TableTennis11</p>
+            <p class="description">Marketing campaign. Event website.</p>
+          </div>
+        </div>
+
+        <!-- if p&c insurance -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2015</p>
+            <p class="company">IF P&C Insurance</p>
+            <p class="description">Analysis report. Design and HTML/CSS development.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Demo</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- apollo cinema -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2014</p>
+            <p class="company">Apollo Cinema</p>
+            <p class="description">Cinema website. Interface and experience redesign, logic restructure concept. With <a href="https://www.linkedin.com/in/liispeetermann/" target="_blank">Liis Peetermann</a>.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- welltrackone -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2014</p>
+            <p class="company">WellTrackONE</p>
+            <p class="description">Brand identity. Logo, website redesign. With <a href="https://www.linkedin.com/in/liispeetermann/" target="_blank">Liis Peetermann</a>.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- shipsticks -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2014</p>
+            <p class="company">ShipSticks</p>
+            <p class="description">Golf club shipping service. Website interface and experience concept. With <a href="https://www.linkedin.com/in/liispeetermann/" target="_blank">Liis Peetermann</a>.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- sparketplace -->
+        <div class="project-item">
+          <div class="wrap-regular">
+            <p class="year year-repeat">2014</p>
+            <p class="company">Sparketplace</p>
+            <p class="description">Event sponsorship platform. Interface design concept. With <a href="https://www.linkedin.com/in/liispeetermann/" target="_blank">Liis Peetermann</a>.</p>
+            <ul class="nav-link-group">
+              <!-- <li class="nav-link"><a href="" target="_blank"><p>Case</p></a></li> -->
+              <li class="nav-link"><a href="" target="_blank"><p>Figma</p></a></li>
+            </ul>
+          </div>
+        </div>
+
+    </section>
+
+    <!-- cta-ending
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section class="cta-ending">
+      <div class="wrap-regular">
+
+        <h3>Open to new opportunities. Work across time zones—based in CET.</h3>
+        <div class="cta-ending-buttons">
+          <a href="https://calendly.com/raigo-lilleberg/lets-talk-30min" class="btn btn-primary" target="_blank">Let's talk</a>
+          <a href="https://www.linkedin.com/in/raigolilleberg/" class="btn btn-secondary" target="_blank">Connect</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+      <div class="wrap-regular">
+
+        <!-- email address -->
+        <p>hi@raigo.design</p>
+
+        <!-- nav links -->
+        <ul class="nav-link-group">
+          <li class="nav-link"><a href="https://www.linkedin.com/in/raigolilleberg/" target="_blank"><p>LinkedIn</p></a></li>
+          <li class="nav-link"><a href="https://github.com/raigolilleberg" target="_blank"><p>Github</p></a></li>
+          <li class="nav-link"><a href="https://www.raigo.design/cv_raigo-lilleberg.pdf" target="_blank"><p>CV</p></a></li>
+        </ul>
+
+      </div>
+  </footer>
+
+
+
+  <!-- that's a wrap
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+</body>
+</html>

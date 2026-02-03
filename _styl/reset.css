@@ -60,7 +60,9 @@ ol {
 body {
   min-height: 100vh;
   padding-top: 0.1px;  /* added — tiny value breaks collapse without visible gap */
-  /* line-height: 1.5; */
+  /* added - helps to stretch vertically */ 
+  display: flex;
+  flex-direction: column;
 }
 
 /* Set shorter line heights on headings and interactive elements */

@@ -1,0 +1,132 @@
+/*
+  hi you! 🙌
+  welcome to my humble journey of always learning. feel free to copy-edit-paste as you like. let me know if you find something useful, helpful. i do my best to cite origins of ideas and approaches that are not mine. 
+  best, raigo!
+
+  hi@raigo.design
+  2026
+
+  —
+
+  appreciated resources:
+  - svg clean-up: https://svgomg.net/ 
+  - svg to data64 converter: https://www.svgviewer.dev/svg-to-data-uri 
+  - favicon creator: https://realfavicongenerator.net/ 
+  - png to webp converter: https://towebp.io/
+
+*/
+
+
+
+/* content list
+=== === === === === === === === === === === === 
+
+  - 00. global
+  - 01. layout
+  – 02. typography
+  – 03. links
+  – 04. buttons
+  – 05. forms
+  – 06. lists
+
+  - 05. header & navigation
+  - 06. main 
+  - 07. footer
+
+  ! also have a look at 'tokens.css'
+
+*/
+
+
+
+/* 05. header & navigation
+=== === === === === === === === === === === === */
+
+header {
+  padding-bottom: 0;
+  margin-bottom: var(--space-fluid-18);
+  /* flex: 1; */
+}
+
+.head-msg-txt h1 {
+  margin-bottom: var(--space-fluid-3);
+}
+@media only screen and (min-width: 50rem) {  
+  .head-msg-txt {
+    width: calc(100% / 12 * 8);
+    margin-bottom: 0;
+  }
+}
+
+
+
+/* 06. main
+=== === === === === === === === === === === === */
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: var(--space-fluid-36);
+}
+.project-item {
+  padding-left: 1.125rem; 
+  padding-right: 1.125rem;
+  border-top: 1px solid var(--col-accent-200);
+  background-color: transparent;
+  transition: background-color var(--trans-duration-normal) ease-out;
+}
+.project-item:hover {
+  background-color: var(--col-surface-tertiary);
+}
+.project-item .wrap-regular {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  /* padding-left: 1.125rem; */
+  /* padding-right: 1.125rem; */
+  padding-top: var(--space-fluid-4);
+  padding-bottom: var(--space-fluid-6);
+}
+/* company name */
+.company {
+  /* width: calc(100% / 12 * 9); */
+  word-break: break-word;
+}
+/* description */
+.description {
+  /* padding-left: calc(100% / 12 * 3); */
+  /* width: 100%; */
+  color: var(--col-txt-secondary);
+}
+/* case study & figma files */
+.project-list .nav-link-group {
+  /* padding-left: calc(100% / 12 * 3); */
+}
+.project-list .nav-link-group {
+  margin-top: var(--space-fluid-3);
+}
+.project-item .nav-link {
+  padding-bottom: 0;
+}
+@media only screen and (min-width: 50rem) {  
+  .project-item .wrap-regular {
+    padding-bottom: var(--space-fluid-4);
+  }
+  .company {
+    width: calc(100% / 12 * 3);
+    padding-right: var(--space-fluid-3);
+  }
+  .description {
+    width: calc(100% / 12 * 6);
+    /* padding-left: 0; */
+    padding-right: var(--space-fluid-3);
+  }
+  .project-list .nav-link-group {
+    width: calc(100% / 12 * 3);
+    margin-top: 0;
+    /* padding-left: 0; */
+    justify-content: flex-end;
+  }
+}

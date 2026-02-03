@@ -1,0 +1,444 @@
+<!-- 
+  hi you! 🙌
+  welcome to my humble journey of always learning. feel free to copy-edit-paste as you like. let me know if you find something useful, helpful. i do my best to cite origins of ideas and approaches that are not mine. 
+  best, raigo!
+
+  hi@raigo.design
+  2026
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- basics
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Raigo / Case study / Entringo Traffic </title>
+  <meta name="description" content="Automated digital traffic management system for logistics facilities (stealth alpha-to-beta).
+Product suffered from design inconsistency blocking beta launch and scalability. Conducted full UX/UI audit, created design system, and redesigned core flows—reducing user task complexity by 40-60% while enabling faster development.">
+  <meta name="author" content="Raigo Lilleberg">
+  <!-- <meta name="keywords" content=""> -->
+
+  <!-- mobile
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.raigo.design/_img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.raigo.design/_img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.raigo.design/_img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="https://www.raigo.design/_img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="https://www.raigo.design/_img/favicon/safari-pinned-tab.svg" color="#1B1C17">
+  <meta name="msapplication-TileColor" content="#FAFAFA">
+  <meta name="theme-color" content="#FAFAFA">
+
+  <!-- external font
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <!-- css
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://www.raigo.design/_styl/reset.css">
+  <link rel="stylesheet" href="https://www.raigo.design/_styl/tokens.css">
+  <link rel="stylesheet" href="https://www.raigo.design/_styl/basic.css">
+  <link rel="stylesheet" href="https://www.raigo.design/_styl/case.css">
+
+  <!-- contentsquare (hotjar) tracking
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:4977038,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+</head>
+<body>
+
+  <!-- content
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <header>
+
+    <nav>
+      <div class="wrap-regular">
+        <!-- logo -->
+        <a href="https://www.raigo.design/" class="logo-raigo">
+          <!-- logo compressed -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 26" fill="" class="logo-rai-min"><path fill="#" d="M45.043 0h4.959v24h-4.959V0ZM20.66 24h5.242l6.105-17.47L37.95 24h5.437L34.89 0h-5.665L20.66 24ZM10.066 14.798H4.895V24H0V0h11.757c1.68.033 2.97.239 3.87.619.911.38 1.681.939 2.31 1.677.52.608.932 1.28 1.236 2.019.303.738.455 1.58.455 2.524 0 1.14-.287 2.263-.862 3.37-.574 1.096-1.523 1.872-2.846 2.328 1.106.445 1.887 1.08 2.342 1.905.466.814.7 2.063.7 3.745V24h-5.01v-3.354l-.032-2.022c-.021-1.53-.303-2.551-.845-3.061-.532-.51-1.534-.765-3.009-.765Zm3.041-4.573c.998-.456 1.496-1.357 1.496-2.703 0-1.454-.482-2.431-1.447-2.93-.542-.283-1.355-.424-2.44-.424H4.896v6.448h5.675c1.128 0 1.973-.13 2.537-.39Z"/></svg>
+          <!-- logo full size -->
+           <svg xmlns="http://www.w3.org/2000/svg" width="101" height="26" fill="" class="logo-rai-full"><path fill="#" d="M88.956 25.241c-3.42 0-6.033-.927-7.84-2.783-2.424-2.276-3.635-5.555-3.635-9.837 0-4.369 1.211-7.648 3.635-9.838C82.923.928 85.536 0 88.956 0c3.419 0 6.032.928 7.839 2.783 2.413 2.19 3.619 5.469 3.619 9.838 0 4.282-1.206 7.561-3.62 9.837-1.806 1.856-4.42 2.783-7.838 2.783Zm4.723-6.407c1.157-1.456 1.736-3.527 1.736-6.213 0-2.675-.584-4.741-1.753-6.197-1.157-1.467-2.726-2.2-4.707-2.2-1.98 0-3.56.727-4.739 2.183-1.18 1.457-1.769 3.528-1.769 6.214 0 2.686.59 4.757 1.77 6.213 1.179 1.456 2.758 2.184 4.739 2.184 1.98 0 3.554-.728 4.723-2.184ZM68.508 24.02c-1.337.814-2.98 1.221-4.932 1.221-3.21 0-5.84-1.1-7.89-3.303-2.137-2.214-3.206-5.24-3.206-9.081 0-3.884 1.08-6.998 3.239-9.342C57.878 1.172 60.733 0 64.283 0c3.08 0 5.551.776 7.414 2.327 1.874 1.54 2.948 3.467 3.222 5.778h-4.98c-.384-1.639-1.321-2.783-2.812-3.434-.833-.358-1.759-.537-2.778-.537-1.95 0-3.556.732-4.816 2.197-1.25 1.454-1.874 3.645-1.874 6.574 0 2.952.679 5.04 2.038 6.266 1.359 1.226 2.904 1.84 4.636 1.84 1.698 0 3.09-.484 4.175-1.45 1.085-.976 1.753-2.25 2.005-3.824h-5.605v-4.003H75v12.873H70.93v-2.578c-.976 1.14-1.644 1.525-2.422 1.992ZM45.043.62h4.959v24h-4.959v-24ZM20.66 24.62h5.242l6.105-17.469 5.943 17.47h5.437L34.89.62h-5.665l-8.564 24ZM10.066 15.418H4.895v9.203H0v-24h11.757c1.68.032 2.97.238 3.87.618.911.38 1.681.94 2.31 1.677.52.608.932 1.281 1.236 2.02.303.738.455 1.579.455 2.523 0 1.14-.287 2.263-.862 3.37-.574 1.097-1.523 1.873-2.846 2.329 1.106.445 1.887 1.08 2.342 1.905.466.814.7 2.062.7 3.745v5.812h-5.01v-3.354l-.032-2.021c-.021-1.531-.303-2.551-.845-3.062-.532-.51-1.534-.765-3.009-.765Zm3.041-4.572c.998-.456 1.496-1.357 1.496-2.703 0-1.455-.482-2.431-1.447-2.93-.542-.283-1.355-.424-2.44-.424H4.896v6.448h5.675c1.128 0 1.973-.13 2.537-.391Z"/></svg>
+        </a>
+        <!-- nav links -->
+        <ul class="nav-link-group">
+          <li class="nav-link"><a href="https://www.raigo.design/case-studies"><p>Case studies</p></a></li>
+          <li class="nav-link"><a href="https://www.raigo.design/projects"><p>Projects</p></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- head message -->
+    <div class="head-msg">
+      <div class="wrap-regular">
+
+        <!-- text -->
+        <div class="head-msg-txt">
+          <h1>Entringo Traffic</h1>
+          <p>Automated digital traffic management system for logistics facilities (stealth alpha-to-beta).</p>
+          <p>Product suffered from design inconsistency blocking beta launch and scalability. Conducted full UX/UI audit, created design system, and redesigned core flows—reducing user task complexity by 40-60% while enabling faster development.</p>
+        </div>
+
+        <!-- links -->
+        <div class="head-msg-links">
+          <a href="#files" class="btn btn-primary">Files</a>
+          <a href="https://entringo.com/entringo-traffic/" class="btn btn-secondary" target="_blank">Client</a>
+        </div>  
+
+      </div>
+    </div>
+    
+  </header>
+
+  <main>
+
+    <!-- hero image
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section class="hero-image">
+      <div class="wrap-regular">
+
+        <img src="https://www.raigo.design/_img/case-entringo-hero.webp" alt="">
+
+      </div>
+    </section>
+
+    <!-- case-intro
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- <section class="intro">
+      <div class="wrap-regular">
+        
+        <h4>Product suffered from design inconsistency blocking beta launch and scalability. Conducted full UX audit, created design system, and redesigned core flows—reducing user task complexity by 40-60% while enabling faster development.</h4>
+        
+        <div class="title"><p>Problem + Solution</p></div>
+        <div class="story">
+          <p>Product suffered from design inconsistency blocking beta launch and scalability. Conducted full UX audit, created design system, and redesigned core flows—reducing user task complexity by 40-60% while enabling faster development.</p>
+        </div>
+
+      </div>
+    </section> -->
+
+    <!-- problem
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section class="problem">
+      <div class="wrap-regular">
+        
+        <div class="title"><p>Problem</p></div>
+        <ul class="list">
+          <li class="list-item"><p>50-60 inconsistent UI patterns across product from ad-hoc decisions</p></li>
+          <li class="list-item"><p>critical user flows required multiple tabs, mental linking, and extensive steps</p></li>
+          <li class="list-item"><p>no design system → developers lacked clear implementation guidelines</p></li>
+          <li class="list-item"><p>blocking beta launch and market expansion</p></li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- problem-images
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section class="problem-images">  
+      <div class="wrap-wide">
+        
+        <img src="https://www.raigo.design/_img/case-entringo-img-wall.webp" alt="">
+
+      </div>
+    </section>
+
+    <!-- approach
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section class="approach">
+      <div class="wrap-regular">
+        
+        <div class="title"><p>Approach</p></div>
+        <!-- <div class="story">
+          <p>_I worked on this and that and what else should i highlight here?</p>
+          <p>ux/ui audit and mapping all critical flows, improving product sitemap for better navigation, refined brand direction, designing product improvements, establishing a design system</p>
+        </div> -->
+        <ul class="list">
+          <li class="list-item"><p>full UX/UI audit identifying flow bottlenecks and pattern inconsistencies</p></li>
+          <li class="list-item"><p>prioritized 3 highest-impact user flows based on frequency and friction points</p></li>
+          <li class="list-item"><p>created comprehensive design system <span class="secondary-text"><i>(components, patterns, documentation)</i></span></p></li>
+          <li class="list-item"><p>iterative redesign within technical constraints <span class="secondary-text"><i>(minimal dev lift, preserve navigation logic)</i></span></p></li>
+          <li class="list-item"><p>developer handoff with annotated specs and state documentation</p></li>
+        </ul>
+
+        <!-- images -->
+        <!-- explored options with help from llm -->
+        <div class="approach-images gallery" aria-label="Project screenshots">
+
+          <div class="gallery__viewport" tabindex="0" aria-label="Image gallery (scrollable)">
+            <figure class="gallery__slide" data-caption="1 / 7 — High-impact user flows before">
+              <img src="https://www.raigo.design/_img/case-entringo-img-gallery-01.webp" alt="High-impact user flows before">
+            </figure>
+
+            <figure class="gallery__slide" data-caption="2 / 7 — Visual sitemap of the product">
+              <img src="https://www.raigo.design/_img/case-entringo-img-gallery-02.webp" alt="Visual sitemap of the platform">
+            </figure>
+
+            <figure class="gallery__slide" data-caption="3 / 7 — UX/UI audit results documented">
+              <img src="https://www.raigo.design/_img/case-entringo-img-gallery-03.webp" alt="UX/UI audit results documented">
+            </figure>
+
+            <figure class="gallery__slide" data-caption="4 / 7 — Alternative take on the dashboard">
+              <img src="https://www.raigo.design/_img/case-entringo-img-gallery-04.webp" alt="Alternative take on the dashboard">
+            </figure>
+
+            <figure class="gallery__slide" data-caption="5 / 7 — Design system file for improved product">
+              <img src="https://www.raigo.design/_img/case-entringo-img-gallery-05.webp" alt="Design system file for new website">
+            </figure>
+
+            <figure class="gallery__slide" data-caption="6 / 7 — Navigation component documentation">
+              <img src="https://www.raigo.design/_img/case-entringo-img-gallery-06.webp" alt="Navigation component documentation">
+            </figure>
+
+            <figure class="gallery__slide" data-caption="7 / 7 — Improved session overview page">
+              <img src="https://www.raigo.design/_img/case-entringo-img-gallery-07.webp" alt="Improved session overview page">
+            </figure>
+          </div>
+
+          <!-- captions -->
+          <p class="gallery__caption" id="galleryCaption"></p>
+          
+          <!-- controls -->
+          <div class="gallery__topbar">
+            <button class="btn-primary gallery__btn" type="button" data-dir="-1" aria-label="Previous image">Prev</button>
+            <p class="gallery__status" aria-live="polite" aria-atomic="true">
+              <span class="gallery__count">1 / 7</span>
+            </p>
+            <button class="btn-primary gallery__btn" type="button" data-dir="1" aria-label="Next image">Next</button>
+          </div>
+
+          <nav class="gallery__dots" aria-label="Choose image"></nav>
+          <!-- <p class="gallery__caption" id="galleryCaption"></p> -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- impact-files
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section class="impact-files">
+      <div class="wrap-regular">
+        
+        <!-- impact -->
+        <div class="impact">
+          <div class="title"><p>Impact</p></div>
+          <!-- content -->
+          <div class="content">
+            <!-- content-one -->
+            <div class="content-one">
+              <p><i>User <span class="secondary-text">(high-impact flows) *</span></i></p>
+              <ul class="list">
+                <li class="list-item"><p>permit creation: 50-60 steps → 20-30 <span class="secondary-text">(50% reduction)</span></p></li>
+                <li class="list-item"><p>event investigation: unified scattered data across interface <span class="secondary-text">(50% faster completion)*</span></p></li>
+                <li class="list-item"><p>gate troubleshooting: eliminated dual-tab workflow <span class="secondary-text">(50% faster, removed operator cognitive strain)*</span></p></li>
+              </ul>
+            </div>
+            <!-- content-two -->
+            <div class="content-two">
+              <p><i>In-house</i></p>
+              <ul class="list">
+                <li class="list-item"><p>design system with component library and implementation guidelines</p></li>
+                <li class="list-item"><p>30-40% faster design-to-development handoff<span class="secondary-text">*</span></p></li>
+                <li class="list-item"><p>enabled consistent implementation patterns across product</p></li>
+              </ul>
+            </div>
+            <!-- footnote -->
+            <div class="content-footnote"><p>* Estimates based on measured workflow changes and step reductions</p></div> 
+          </div>
+        </div>
+        <!-- files -->
+        <div class="files" id="files">
+          <div class="title"><p>Files</p></div>
+          <ul class="nav-link-group">
+            <li class="nav-link"><a href="https://www.figma.com/design/FjBQf2sglUfrzXxED9rfSp/file_entringo-traffic-library?node-id=813-7163&p=f&t=mek6T2JJYXDDHGii-11" target="_blank"><p>Design system</p></a><i class="secondary-text"> (tokens, components, states)</i></li>
+            <li class="nav-link"><a href="https://www.figma.com/design/uWviVYKRf1JLRUEQR7LB2o/file_entringo-traffic-webapp?node-id=702-996&t=AA4ulGwrygMo3SM0-11" target="_blank"><p>Production-ready designs</p></a></li>
+            <li class="nav-link"><a href="https://www.figma.com/design/J9UUrBT6SS8bMIO2TKm42a/file_entringo-traffic-draft?node-id=564-4488&t=ybNgs6lxeBAwgf9Y-11" target="_blank"><p>Design explorations</p></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- case studies
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section class="case-studies">
+      <div class="wrap-regular">
+
+        <!-- visual -->
+        <div class="cs-visuals">
+          <div class="cs-visual-01">
+            <img src="https://www.raigo.design/_img/case-01.webp" alt="">
+          </div>
+          <div class="cs-visual-02">
+            <img src="https://www.raigo.design/_img/case-03.webp" alt="">
+          </div>
+          <!-- <img src="_img/cases-visuals.webp" alt=""> -->
+        </div>
+
+        <!-- case study list -->
+        <div class="cs-list">
+          <ul>
+            <!-- jiwambe -->
+            <li class="cs-list-item"> 
+              <h4>Jiwambe</h4>
+              <p>Established systematic design function: design system, file architecture, and cross-functional processes supporting multi-country rollout. On-going.</p>
+              <a href="https://www.raigo.design/case-studies/jiwambe"><p>Case study</p></a>
+            </li>
+            <!-- polar explorer -->
+            <li class="cs-list-item"> 
+              <h4>Polar Explorer</h4>
+              <p>Streamlined to 14 steps (39% reduction) and improved information hierarchy—cutting repetitive inquiries from 80% to 30-40%.</p>
+              <a href="https://www.raigo.design/case-studies/polar-explorer"><p>Case study</p></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- cta-ending
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <section class="cta-ending">
+      <div class="wrap-regular">
+
+        <h3>Open to new opportunities. Work across time zones—based in CET.</h3>
+        <div class="cta-ending-buttons">
+          <a href="https://calendly.com/raigo-lilleberg/lets-talk-30min" class="btn btn-primary" target="_blank">Let's talk</a>
+          <a href="https://www.linkedin.com/in/raigolilleberg/" class="btn btn-secondary" target="_blank">Connect</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+      <div class="wrap-regular">
+
+        <!-- email address -->
+        <p>hi@raigo.design</p>
+
+        <!-- nav links -->
+        <ul class="nav-link-group">
+          <li class="nav-link"><a href="https://www.linkedin.com/in/raigolilleberg/" target="_blank"><p>LinkedIn</p></a></li>
+          <li class="nav-link"><a href="https://github.com/raigolilleberg" target="_blank"><p>Github</p></a></li>
+          <li class="nav-link"><a href="https://www.raigo.design/cv_raigo-lilleberg.pdf" target="_blank"><p>CV</p></a></li>
+        </ul>
+
+      </div>
+  </footer>
+
+
+
+  <!-- horisontal image gallery functionality
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script defer>
+    (() => {
+      const root = document.querySelector(".gallery");
+      if (!root) return;
+
+      const viewport = root.querySelector(".gallery__viewport");
+      const slides = Array.from(root.querySelectorAll(".gallery__slide"));
+      const dotsWrap = root.querySelector(".gallery__dots");
+      const caption = root.querySelector("#galleryCaption");
+      const count = root.querySelector(".gallery__count");
+      const buttons = Array.from(root.querySelectorAll(".gallery__btn"));
+
+      if (!viewport || slides.length === 0) return;
+
+      const total = slides.length;
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      const dots = slides.map((_, i) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "gallery__dot";
+        b.setAttribute("aria-label", `Go to image ${i + 1}`);
+        b.addEventListener("click", () => go(i));
+        dotsWrap.appendChild(b);
+        return b;
+      });
+
+      const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
+
+      function indexFromScroll() {
+        // Find the slide whose left edge is closest to viewport's left edge
+        const vLeft = viewport.getBoundingClientRect().left;
+        let best = 0;
+        let bestDist = Infinity;
+
+        slides.forEach((s, i) => {
+          const dist = Math.abs(s.getBoundingClientRect().left - vLeft);
+          if (dist < bestDist) { bestDist = dist; best = i; }
+        });
+
+        return best;
+      }
+
+      function setUI(i) {
+        count.textContent = `${i + 1} / ${total}`;
+        caption.textContent = slides[i].dataset.caption || "";
+        dots.forEach((d, idx) => d.setAttribute("aria-current", idx === i ? "true" : "false"));
+
+        const prev = buttons.find(b => b.dataset.dir === "-1");
+        const next = buttons.find(b => b.dataset.dir === "1");
+        if (prev) prev.disabled = i === 0;
+        if (next) next.disabled = i === total - 1;
+      }
+
+      function go(i) {
+        const idx = clamp(i, 0, total - 1);
+        viewport.scrollTo({
+          left: slides[idx].offsetLeft,
+          behavior: reducedMotion ? "auto" : "smooth",
+        });
+        setUI(idx);
+      }
+
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const dir = Number(btn.dataset.dir);
+          go(indexFromScroll() + dir);
+        });
+      });
+
+      viewport.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") { e.preventDefault(); go(indexFromScroll() - 1); }
+        if (e.key === "ArrowRight") { e.preventDefault(); go(indexFromScroll() + 1); }
+        if (e.key === "Home") { e.preventDefault(); go(0); }
+        if (e.key === "End") { e.preventDefault(); go(total - 1); }
+      });
+
+      let raf = 0;
+      viewport.addEventListener("scroll", () => {
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => setUI(indexFromScroll()));
+      });
+
+      setUI(0);
+    })();
+  </script>
+
+
+
+  <!-- that's a wrap
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+</body>
+</html>

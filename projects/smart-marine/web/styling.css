@@ -1,0 +1,1034 @@
+
+
+
+/* 
+  Design & code by Raigo Lilleberg from Kreit!
+  www.kreit.co
+ */
+
+ /* === === === === === === === === === === === === === === === */
+ /*
+
+   Contents:
+
+   - BROWSER RESET
+   - BASICS
+   - GENERAL
+   - HEADER
+   - NAV
+   - MAIN ( only repeating parts, mainly layout releated )
+   - FOOTER
+   - BITS & PEACES
+
+ */
+ /* === === === === === === === === === === === === === === === */
+
+
+
+/* BROWSER RESET (mixted together from "Reset.css" and "Normalize.css")  */
+/* === === === === === === === === === === === === === === === */
+
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button, input, optgroup, select, textarea {
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      -webkit-border-radius: 0; 
+      -moz-border-radius:0; 
+      border-radius: 0;
+      border-style: none;
+    }
+    html {  
+      line-height: 1;
+      word-wrap: break-word;
+    }
+    html,
+    body {
+      width: 100%; 
+      /*height: 100%; */
+      min-height: 100%;
+      -webkit-box-sizing: border-box; 
+      -moz-box-sizing: border-box; 
+      box-sizing: border-box;
+    }
+    body {
+      -webkit-font-smoothing: antialiased; 
+      -moz-osx-font-smoothing: grayscale; 
+      -ms-text-size-adjust: 100%; 
+      -webkit-text-size-adjust: 100%;
+      /*overflow: auto;*/
+    }
+    *,
+    :after,
+    :before,
+    ::after,
+    ::before {
+      -webkit-box-sizing: inherit; 
+      -moz-box-sizing: inherit; 
+      box-sizing: inherit; 
+      border-style: solid;
+      border-width: 0;
+      text-decoration: inherit; 
+      vertical-align: inherit;
+    }
+    * {
+      -moz-box-sizing:border-box; 
+      -webkit-box-sizing:border-box; 
+      box-sizing:border-box; 
+      margin: 0;
+      padding: 0;
+      -webkit-transition: all 60ms linear; 
+      -moz-s: all 60ms linear; 
+      -ms-transition: all 60ms linear; 
+      -o-transition:all 60ms linear; 
+      transition: all 60ms linear;
+    }
+    :root {
+      -ms-overflow-style: -ms-autohiding-scrollbar; 
+      overflow-y: scroll; 
+      -webkit-text-size-adjust: 100%; 
+      -ms-text-size-adjust: 100%; 
+      text-size-adjust: 100%; 
+      box-sizing: border-box; 
+      cursor: default; 
+      text-rendering: optimizeLegibility;
+    }
+    article,
+    aside,
+    footer,
+    header,
+    nav,
+    section,
+    figcaption,
+    figure,
+    main {
+      display: block;
+    }  
+    figure {
+      margin: 1em 40px;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    fieldset {
+      border: 0;
+    }
+      legend {
+        box-sizing: border-box; 
+        color: inherit; 
+        display: table; 
+        max-width: 100%; 
+        padding: 0; 
+        white-space: normal; 
+      }
+    img,
+    div {
+      display: block;
+      border: 0; 
+      border-style: none;
+    }
+    [hidden],
+    audio:not([controls]),
+    template {
+      display: none
+    }
+    details,
+    main {
+      display: block;
+    }
+    summary {
+      display: list-item;
+    }
+    button, 
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-style: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      color: inherit;
+      background-color: transparent;
+    }
+    button {
+      cursor: pointer;
+    }
+    button, 
+    input {
+      overflow: visible;
+      text-transform: none;
+    }
+    input[type=number] {
+      width: auto;
+    }
+    input[type=search] {
+      -webkit-appearance: textfield;
+    }
+    input[type=search]::-webkit-search-cancel-button,
+    input[type=search]::-webkit-search-decoration {
+      -webkit-appearance: none
+    }
+    button,
+    html [type="button"], 
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button; 
+    }
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+    button:-moz-focusring,
+    [type="button"]:-moz-focusring,
+    [type="reset"]:-moz-focusring,
+    [type="submit"]:-moz-focusring {
+      outline: 1px dotted ButtonText;
+    }
+    [type="checkbox"],
+    [type="radio"] {
+      box-sizing: border-box; 
+      padding: 0; 
+    }
+    [type="checkbox"] + label,
+    [type="radio"] +label {
+      cursor: pointer;      
+    }
+    [type="number"]::-webkit-inner-spin-button,
+    [type="number"]::-webkit-outer-spin-button {
+      height: auto;
+    }
+    [type="search"] {
+      -webkit-appearance: textfield; 
+      outline-offset: -2px; 
+    }
+    [type="search"]::-webkit-search-cancel-button,
+    [type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+    ::-webkit-file-upload-button {
+      -webkit-appearance: button; 
+      font: inherit; 
+    }
+    progress {
+      display: inline-block;
+      vertical-align: baseline;
+    }
+    pre,
+    textarea {
+      overflow: auto;
+    }
+    textarea {
+      resize: vertical;
+    }
+    code, 
+    kbd,
+    pre,
+    samp {
+      font-family: monospace, monospace;
+    }
+    dfn {
+      font-style: italic;
+    }
+    mark {
+      background-color: #ff0;
+      color: #000;
+    }
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+    }
+    sub {
+      bottom: -0.25em;
+    }
+    sup {
+      top: -0.5em;
+    }
+    b,
+    strong {
+      font-weight: bolder;
+    }
+    small {
+      font-size: 75%;
+    }
+    [unselectable] {
+      -webkit-user-select: none; 
+      -moz-user-select: none; 
+      -ms-user-select: none; 
+      user-select: none;
+    }
+    abbr[title] {
+      border-bottom: none; 
+      text-decoration: underline;
+      text-decoration: underline dotted; 
+    }
+    audio,
+    canvas,
+    iframe,
+    img,
+    svg,
+    video {
+      vertical-align: middle;
+    }
+    svg:not(:root) {
+      overflow: hidden;
+    }
+    audio,
+    video {
+      display: inline-block;
+    }
+    audio:not([controls]) {
+      display: none;
+      height: 0;
+    }
+    canvas {
+      display: inline-block;
+    }
+    hr {
+      box-sizing: content-box;
+      height: 0; 
+      overflow: visible;
+    }
+    ol,
+    ul {
+      list-style: none;
+    }
+    select {
+      -moz-appearance: none; 
+      -webkit-appearance: none;
+    }
+    select::-ms-expand {
+      display: none;
+    }
+    select::-ms-value {
+      color: currentColor;
+    }
+    /*::-moz-selection {
+      background-color: hsla(0, 0%, 90%, 1);
+      color: hsla(0, 0%, 10%, 1);
+      text-shadow: none;
+    }
+    ::selection {
+      background-color: hsla(0, 0%, 90%, 1);
+      color: hsla(0, 0%, 10%, 1);
+      text-shadow: none;
+    } */
+    a {
+      position: relative;
+      background-color: transparent; 
+      -webkit-text-decoration-skip: objects; 
+      text-decoration: none; 
+    }
+      a:active,
+      a:hover { /*Remove the outline on focused links when they are also active or hovered in all browsers*/
+        outline-width: 0;
+      }
+   /* @media screen{[hidden~=screen] {
+      
+    }*/
+    [hidden~=screen]:not(:active):not(:focus):not(:target) {
+      clip:rect(0 0 0 0)!important;
+      position:absolute!important;
+    }
+    template,
+    [hidden] {
+      display: none;
+    }
+
+/* === === === === === === === === === === === === === === === */
+
+
+
+/* BASICS */
+/* === === === === === === === === === === === === === === === */
+
+    html {
+      
+    }
+    body {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 1.25;
+      color: hsla(0, 0%, 20%, 1);  
+      background-color: #f6f6f6;
+      overflow: hidden;
+    }
+
+    ol, ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      font-family: 'Coda', cursive;
+      font-size: 2.75rem;
+      font-weight: 100;
+      line-height: 1;
+      letter-spacing: -.1rem;
+      margin-left: -3px;
+      margin-bottom: 1rem;
+    } 
+    h2 {
+      font-family: 'Coda', cursive;
+      font-size: 1.75rem;
+      font-weight: 100;
+      line-height: 1;
+      margin-left: -1px;
+      margin-bottom: 1rem;
+    }  
+    h3  { 
+      font-weight: 600;
+      margin-bottom: .4rem;
+    }
+    h4 {
+
+    }
+    h1, h2, h3, h4 {
+      color: #498bc9;
+    }
+
+    h3,
+    p {
+      font-size: .75rem;  
+      line-height: 1.25;    
+    }
+    p {
+
+    }
+      p span {
+        color: hsla(0, 0%, 50%, 1);
+      }
+
+    small {
+      font-size: .813rem;
+      line-height: 1.45;
+      letter-spacing: .025rem;
+    }
+
+    a img {
+      color: hsla(0, 0%, 50%, 1); 
+    }
+
+    a { 
+      position: relative;
+      -webkit-text-decoration-skip: ink;
+      text–decoration–skip: ink;
+      color: inherit; 
+    }
+      a:after {
+        position: absolute;
+        bottom: -0.05rem;
+        left: 0;
+        content: ' ';
+        width: 100%;
+        height: .05rem;
+        background-color: hsla(0, 0%, 30%, 1); 
+      }
+    a:hover,
+    a:active,
+    a:focus,
+    a:hover img,
+    a:active img,
+    a:focus img {
+      color: #498bc9; 
+    }
+      a:hover:after {
+        background-color: hsla(0, 0%, 70%, 1);  
+      }
+    a.no-link {      
+      color: hsla(0, 0%, 70%, 1); 
+      pointer-events: none;  
+    }
+
+    @media (min-width: 55em) {
+      h1 {
+        font-size: 3.25rem;
+        letter-spacing: -.1rem;
+        margin-left: -3px;
+        margin-bottom: 1.25rem;
+      }
+      h2 {
+        font-size: 2.25rem;
+        margin-left: -1px;
+        margin-bottom: 1.6rem;
+      }
+      h3 {        
+        margin-bottom: .4rem;
+      }
+      h3,
+      p {
+        font-size: 1rem;
+        line-height: inherit;
+      }
+    }
+    /*@media  (min-width: 68em) {
+      
+    }*/
+
+/* === === === === === === === === === === === === === === === */
+
+
+
+/* GENERAL */
+/* === === === === === === === === === === === === === === === */
+
+  ::-moz-selection,
+  ::selection {
+    background-color: #498bc9;  
+    color: hsla(0, 0%, 100%, 1);
+    text-shadow: none;
+  }
+  .content { 
+    position: relative;
+    padding-top: 2.5rem;
+    min-height: 100vh;
+  }
+
+  header,
+  nav,
+  main,
+  footer {
+    position: relative;  
+    /*max-width: 32rem;*/
+    margin: 0 auto;
+    padding: 0 2.5rem;
+  }
+
+  .line-01,
+  .line-02 {
+    width: 1.1rem;
+    height: .2em;
+    background-color: #ec5a4f;
+  }
+  .line-01 {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .line-02 {
+    margin-top: .625rem;
+    margin-bottom: .625rem;
+  }
+
+  @media (min-width: 40em) {
+    .content {      
+      padding-top: 5rem;
+    }
+  }
+  @media (min-width: 55em) {
+    header,
+    nav,
+    main,
+    footer {
+      max-width: 55rem;
+    }
+    .slogan p {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+  }
+  /*@media all, (-ms-high-contrast:none) and (min-width: 1088px)*/
+  @media (min-width: 68em) {
+    header,
+    nav,
+    main,
+    footer {
+      max-width: 64rem;
+    }
+  }
+
+/* === === === === === === === === === === === === === === === */
+
+
+
+/* HEADER */
+/* === === === === === === === === === === === === === === === */
+
+  header {
+    height: 75vh;
+  }
+
+  .logo {
+    position: absolute;
+    right: 2.5rem;
+    width: 20vw;
+    max-width: 5rem;
+  }
+
+  .slogan {
+    /*padding-top: 16.875rem;*/
+    padding-top: 15vh;
+  }
+    .slogan p {
+      font-size: 1rem;
+      line-height: 1.2rem;
+    }
+    .slogan br {
+      display: none;
+    }
+
+  .logomark {
+    display: none;
+  }
+    .logomark img {
+      width: 100%;
+    }
+
+  @media (min-width: 23.188em) {
+    .slogan br {
+      display: block;
+    }
+  }
+  @media (min-width: 55em) {
+    .slogan {
+      padding-top: 20vh;
+    }
+    .slogan p {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    } 
+  }  
+  @media (min-width: 61.25em) {
+    .logo {
+      left: -2rem;
+      max-width: 5rem;
+    }
+    .logomark {
+      display: block;      
+      position: absolute;
+      top: 9vh;
+      right: -33vw;
+      max-width: 45rem;
+    }
+  }
+  @media (min-width: 68em) {  
+    .logomark {
+      right: -13vw;
+    }
+  }
+
+/* === === === === === === === === === === === === === === === */
+
+
+
+/* NAV */
+/* === === === === === === === === === === === === === === === */
+
+/* === === === === === === === === === === === === === === === */
+
+
+
+/* ASIDE - secondary navigation */
+/* === === === === === === === === === === === === === === === */
+
+/* === === === === === === === === === === === === === === === */
+
+
+
+/* MAIN */
+/* === === === === === === === === === === === === === === === */
+
+  main {
+    position: relative;
+  }
+
+  .services > ul,
+  .products > ul {
+    /*flex-direction: row;*/
+  }
+  .services,
+  .products {
+    margin-bottom: 3.8rem;
+  }
+    .the-group {
+
+    }
+      .the-group p {
+        /*margin-bottom: .8rem;*/
+      }
+      .companies-list {
+        font-weight: 600;
+      }
+      .companies-list li {
+        font-size: .875rem;
+      }
+      .companies-list li,
+      .products-list li {
+        position: relative;
+        font-size: .75rem;
+        line-height: 1.25;
+      }
+      .companies-list a:after {
+        display: none;
+      }
+      .companies-list a:before,
+      .products-list li:before {
+        margin-right: .4rem;
+        content: "›";
+        color: #498bc9;
+      }
+
+    .companies-list span,
+    .products-list span {
+      color: hsla(0, 0%, 50%, 1);
+    }
+
+    .g01 {}
+    .g02,
+    .g03 {
+      margin-top: 1rem;
+    }
+    .g04 {}
+    .g05,
+    .g06 {
+      margin-top: 1rem;
+    }
+    .g06 {}
+      .g06 h3 {
+        margin-bottom: 1rem;
+      }
+
+  .logoes {
+
+  }
+    .logoes ul {
+      flex-direction: row;
+      /*justify-content: space-between;*/
+    }
+    .logoes li {
+      align-self: center;
+      margin-right: .9rem;
+      margin-bottom: .65rem;
+    }
+    .logoes a:after {
+      display: none;
+    }
+    .logoes a svg {
+      fill: hsla(0, 0%, 25%, 1);
+    }
+    .logoes a:hover svg {
+      fill: #498bc9;
+    }
+      .amimarine {
+        width: 3rem;
+      }
+      .consilium {
+        width: 6rem;        
+      }
+      .danelec {
+        width: 4rem;         
+      }
+      .entel {
+        width: 2rem;
+      }
+      .furumo {
+        width: 5rem;
+      }
+      .interschalt {
+        width: 5.5rem;
+      }
+      .jotron {
+        width: 2.5rem;
+      }
+      .jrc {
+        width: 1.5rem;
+      }
+      .keiki {
+        width: 2.5rem;
+      }
+      .kelvin-hughes {
+        width: 3rem;
+      }
+      .kns {
+        width: 2rem;
+      }
+      .koden {
+        width: 2.5rem;
+      }
+      .mcmurdo {
+        width: 3.5rem;
+      }
+      .netwave {
+        width: 3.5rem;
+      }
+      .raytheon {
+        width: 4rem;
+      }
+      .saab {
+        width: 3rem;
+      }
+      .simrad {
+        width: 3.75rem;
+      }
+      .sperry-marine {
+        width: 7rem;
+      }
+      .transas {
+        width: 3.5rem;
+      }
+      .wartsila {
+        width: 2.5rem;
+      }
+      .yokogawa {
+        width: 5.5rem;
+      }
+      .cobham {
+        width: 5rem;
+      }
+
+  .products {
+
+  }
+
+  .contact-us {
+    margin-bottom: 7.6rem;
+  }
+    .contact-us a:after {
+      display: none;
+    }
+  .error-msg {
+    padding-top: 20vh;
+  }
+    .error-msg a:after {
+      display: none;
+    }
+
+  @media (min-width: 36.25em) {
+    .services > ul,
+    .products > ul {
+      flex-direction: row;
+    }
+    .the-group {
+      width: 50%;
+      padding-right: 10%;
+    }
+      .g02,
+      .g05 {
+        margin-top: 0;
+      }
+      .g03,
+      .g06 {
+        /*margin-top: 1.6rem;*/
+      }
+      .g06 {
+        width: 100%;
+        padding: 0;
+      }
+        .g06 h3 {
+          /*margin-bottom: 1.2rem;*/
+        }
+  }
+  @media (min-width: 55em) {
+    .services,
+    .products {
+      margin-bottom: 7.6rem;
+    }
+    .contact-us {
+      margin-bottom: 15.2rem;
+    }
+    .companies-list li, 
+    .products-list li {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .the-group {
+      width: 50%;
+      padding-right: 10%;
+    }
+      .g02,
+      .g05 {
+        margin-top: 0;
+      }
+      .g03,
+      .g06 {
+        margin-top: 1.6rem;
+      }
+      .g06 {
+        width: 100%;
+        padding: 0;
+      }
+        .g06 h3 {
+          margin-bottom: 1.2rem;
+        }
+
+    .logoes li {
+      margin-right: 1.5rem;
+      margin-bottom: .75rem;
+    }
+
+    .amimarine {
+      width: 4rem;
+    }
+    .consilium {
+      width: 8rem;        
+    }
+    .danelec {
+      width: 5.25rem;         
+    }
+    .entel {
+      width: 3rem;
+    }
+    .furumo {
+      width: 7rem;
+    }
+    .interschalt {
+      width: 7.5rem;
+    }
+    .jotron {
+      width: 3.5rem;
+    }
+    .jrc {
+      width: 3rem;
+    }
+    .keiki {
+      width: 3.5rem;
+    }
+    .kelvin-hughes {
+      width: 4.5rem;
+    }
+    .kns {
+      width: 2.5rem;
+    }
+    .koden {
+      width: 4rem;
+    }
+    .mcmurdo {
+      width: 4.5rem;
+    }
+    .netwave {
+      width: 5.5rem;
+    }
+    .raytheon {
+      width: 5.5rem;
+    }
+    .saab {
+      width: 4.5rem;
+    }
+    .simrad {
+      width: 5.25rem;
+    }
+    .sperry-marine {
+      width: 9rem;
+    }
+    .transas {
+      width: 4.5rem;
+    }
+    .wartsila {
+      width: 3.5rem;
+    }
+    .yokogawa {
+      width: 7rem;
+    }
+    .cobham {
+      width: 6.5rem;
+    }
+  }
+  @media (min-width: 68em) {    
+    .logoes li {
+      margin-right: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+/* === === === === === === === === === === === === === === === */
+
+
+
+/* FOOTER */
+/* === === === === === === === === === === === === === === === */
+
+  footer {
+    padding-bottom: 2.5vh;
+    /*text-align: center;*/
+  }
+    footer p {
+      font-size: .75rem;
+      line-height: 1.15;
+    }
+    footer p:first-child {
+      margin-bottom: .5rem;
+    }
+
+  @media (min-width: 55em) {
+    footer p {
+      font-size: .875rem;
+      line-height: 1.25;
+    }
+    footer p:first-child {
+      margin-bottom: .75rem;
+    }
+  }
+
+
+/* === === === === === === === === === === === === === === === */
+
+
+
+/* BITS & PIECES */
+/* === === === === === === === === === === === === === === === */
+  
+  /* patterns */
+  /* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+    .patterns {
+      display: none;
+    }
+    .patterns svg {
+      fill:none;
+      stroke:#e7e8e9;
+      stroke-miterlimit:10;
+      stroke-width:.1rem;
+    }
+      .patt-01,
+      .patt-02,
+      .patt-03 {
+        position: absolute;
+        z-index: -1;
+      }
+
+      .patt-01 {
+        top: 100rem;
+        right: -16rem;
+        width: 30rem;
+        transform: rotate(420deg);
+      }
+      .patt-02 {
+        top: 47rem;
+        left: -15rem;
+        width: 30rem;
+        transform: rotate(103deg);
+      }
+      .patt-03 {
+        bottom: -8.5rem;
+        left: -12rem;
+        width: 30rem;
+        transform: rotate(170deg);
+      }
+
+    @media (min-width: 70em) {  
+      .patterns {
+        display: block;
+      }
+    }
+
+  /* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+/* === === === === === === === === === === === === === === === */
+
+
+
+
+
+
+
+
+
+
+

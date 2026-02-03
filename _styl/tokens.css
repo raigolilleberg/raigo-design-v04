@@ -69,7 +69,7 @@
     /* fluid spacing */
     --space-fluid-1: 0.25rem;   /* 4px */
     --space-fluid-2: 0.5rem;    /* 8px */
-    --space-fluid-3: 0.75rem;   /* 12px */
+    --space-fluid-3: clamp(0.5rem, 0.4091rem + 0.4545vw, 0.75rem); /* 8-12px */
     --space-fluid-4: clamp(0.75rem, 0.6477rem + 0.4545vw, 1rem);   /* 12-16px */
     --space-fluid-6: clamp(1rem, 0.7955rem + 0.9091vw, 1.5rem);    /* 16-24px */
     --space-fluid-9: clamp(1.5rem, 1.1932rem + 1.3636vw, 2.25rem); /* 24-36px */
@@ -102,13 +102,15 @@
     
   }
 
+
+
 /* 04. colour
 === === === === === === === === === === === === */
 
   :root {
 
     /* primitives */
-    --col-gray: hsl(72, 6%, 90%);
+    --col-gray: hsl(72, 5%, 90%);
     --col-salmon: hsl(17, 40%, 68%);
 
     /*  */
@@ -124,21 +126,34 @@
     --col-neutral-600: hsl(from var(--col-gray) h s 30%);
     --col-neutral-700: hsl(from var(--col-gray) h s 20%);
     --col-neutral-800: hsl(from var(--col-gray) h s 15%);
-    --col-neutral-900: hsl(from var(--col-gray) h s 10%);
+    --col-neutral-900: hsl(from var(--col-gray) h 10% 10%);
 
     /* accent */
-    --col-accent-50: hsl(from var(--col-salmon) h s 98%);
-    --col-accent-100: hsl(from var(--col-salmon) h s 95%);
-    --col-accent-200: hsl(from var(--col-salmon) h s 90%);
+    /* --col-accent-50: hsl(from var(--col-salmon) h 10% 98%);
+    --col-accent-100: hsl(from var(--col-salmon) h 10% 95%);
+    --col-accent-200: hsl(from var(--col-salmon) h 10% 90%);
     --col-accent-300: hsl(from var(--col-salmon) h 10% 85%);
-    --col-accent-400: hsl(from var(--col-salmon) h s 75%);
+    --col-accent-400: hsl(from var(--col-salmon) h 25% 75%);
 
     --col-accent-500: hsl(from var(--col-salmon) h s 68%);
 
-    --col-accent-600: hsl(from var(--col-salmon) h s 60%);
-    --col-accent-700: hsl(from var(--col-salmon) h s 40%);
-    --col-accent-800: hsl(from var(--col-salmon) h s 20%);
-    --col-accent-900: hsl(from var(--col-salmon) h s 10%);
+    --col-accent-600: hsl(from var(--col-salmon) h 35% 60%);
+    --col-accent-700: hsl(from var(--col-salmon) h 30% 40%);
+    --col-accent-800: hsl(from var(--col-salmon) h 30% 20%);
+    --col-accent-900: hsl(from var(--col-salmon) h 30% 10%); */
+
+    --col-accent-50:  hsl(from var(--col-salmon) h 10% 94%);
+    --col-accent-100: hsl(from var(--col-salmon) h 10% 90%);
+    --col-accent-200: hsl(from var(--col-salmon) h 10% 85%);
+    --col-accent-300: hsl(from var(--col-salmon) h 20% 80%);
+    --col-accent-400: hsl(from var(--col-salmon) h 35% 72%);
+
+    --col-accent-500: hsl(from var(--col-salmon) h s l);
+
+    --col-accent-600: hsl(from var(--col-salmon) h 35% 60%);
+    --col-accent-700: hsl(from var(--col-salmon) h 30% 42%);
+    --col-accent-800: hsl(from var(--col-salmon) h 25% 25%);
+    --col-accent-900: hsl(from var(--col-salmon) h 10% 10%);
 
     /* 
       Kevin Powell has a good intro to relative colours:
@@ -153,25 +168,26 @@
     /* surface */
     --col-surface-primary: var(--col-neutral-50);
     --col-surface-secondary: var(--col-accent-500);
-    --col-surface-tertiary: var(--col-accent-300);
+    --col-surface-tertiary: var(--col-accent-200);
 
     /* text */
     --col-txt-primary: var(--col-neutral-900);
-    --col-txt-secondary: var(--col-neutral-600);
-    --col-txt-disabled: var(--col-neutral-300);
+    /* --col-txt-secondary: var(--col-neutral-500); */
+    --col-txt-secondary: hsl(from var(--col-neutral-900) h s l / .65);
+    --col-txt-disabled: hsl(from var(--col-neutral-900) h 10% 10% / .5);
 
     /* link-text */
     --col-link-txt-default: var(--col-neutral-900);
-    --col-link-txt-hover: var(--col-neutral-600);
-    --col-link-txt-active: var(--col-neutral-600);
+    --col-link-txt-hover: hsl(from var(--col-neutral-900) h 10% 10% / .65);
+    --col-link-txt-active: hsl(from var(--col-neutral-900) h 10% 10% / .65);
     --col-link-txt-focus: var(--col-neutral-900);
-    --col-link-txt-disabled: var(--col-neutral-300);
+    --col-link-txt-disabled: hsl(from var(--col-neutral-900) h 10% 10% / .5);
     /* link-border */
-    --col-link-border-default: var(--col-neutral-400);
-    --col-link-border-hover: var(--col-neutral-300);
-    --col-link-border-active: var(--col-neutral-300);
-    --col-link-border-focus: var(--col-neutral-400);
-    --col-link-border-disabled: var(--col-neutral-300);
+    --col-link-border-default: hsl(from var(--col-neutral-900) h 10% 10% / .5);
+    --col-link-border-hover: hsl(from var(--col-neutral-900) h 10% 10% / .25);
+    --col-link-border-active: hsl(from var(--col-neutral-900) h 10% 10% / .25);
+    --col-link-border-focus: hsl(from var(--col-neutral-900) h 10% 10% / .5);
+    --col-link-border-disabled: hsl(from var(--col-neutral-900) h 10% 10% / .15);
 
     /* action-primary-background */
     --col-action-primary-bg-default: var(--col-accent-500);
@@ -185,12 +201,12 @@
     --col-action-primary-txt-disabled: var(--col-neutral-300);
 
     /* action-secondary-background */
-    --col-action-secondary-bg-default: var(--col-neutral-100);
-    --col-action-secondary-bg-hover: var(--col-neutral-200);
-    --col-action-secondary-bg-active: var(--col-neutral-200);
-    --col-action-secondary-bg-focus: var(--col-neutral-100);
-    --col-action-secondary-bg-selected: var(--col-neutral-200);
-    --col-action-secondary-bg-disabled: var(--col-neutral-100);
+    --col-action-secondary-bg-default: var(--col-accent-200);
+    --col-action-secondary-bg-hover: var(--col-accent-300);
+    --col-action-secondary-bg-active: var(--col-accent-300);
+    --col-action-secondary-bg-focus: var(--col-accent-200);
+    --col-action-secondary-bg-selected: var(--col-accent-300);
+    --col-action-secondary-bg-disabled: var(--col-accent-200);
     /* action-secondary-text */
     --col-action-secondary-txt-default: var(--col-neutral-900);
     --col-action-secondary-txt-disabled: var(--col-neutral-300);
@@ -205,8 +221,6 @@
   }
 
   
-
-
 
 /* 05. typography
 === === === === === === === === === === === === */
@@ -292,7 +306,7 @@
   :root { 
     
     --border-none: 0;
-    --border-sm: 1rem;
+    --border-sm: .1rem;
     --border-md: .125rem; /* 1.5px */
     
   }
@@ -324,3 +338,7 @@
   :root {
     
   }
+
+
+
+ 

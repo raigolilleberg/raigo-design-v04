@@ -21,6 +21,7 @@
 /* content list
 === === === === === === === === === === === === 
 
+  - 00. global
   - 01. layout
   – 02. typography
   – 03. links
@@ -32,14 +33,22 @@
   - 06. main 
   - 07. footer
 
-  – 08. scaling / breakpoints
-
   ! also have a look at 'tokens.css'
 
 */
 
 
 
-/* 01. layout / spacing
+/* 05. header & navigation
 === === === === === === === === === === === === */
 
+header {
+  flex: 1;
+}
+
+nav .wrap-regular {
+  height: 2.125rem;
+}
+nav .nav-link-group {
+  display: none;
+}

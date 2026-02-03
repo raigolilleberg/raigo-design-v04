@@ -4,3 +4,7 @@ dist
 .cache
 .env
 .vscode
+
+# Additional exclusions
+_archive/
+err/
