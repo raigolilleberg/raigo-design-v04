@@ -127,6 +127,7 @@
     --col-neutral-700: hsl(from var(--col-gray) h s 20%);
     --col-neutral-800: hsl(from var(--col-gray) h s 15%);
     --col-neutral-900: hsl(from var(--col-gray) h 10% 10%);
+    --col-neutral-0-t25: hsl(from var(--col-gray) h s 98% / .25);
 
     /* accent */
     /* --col-accent-50: hsl(from var(--col-salmon) h 10% 98%);

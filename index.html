@@ -131,10 +131,48 @@
           <div class="bb-anchor_top-right"></div>
           <div class="bb-anchor_btm-left"></div>
           <div class="bb-anchor_btm-right"></div>    
-          <div class="bb-message"></div> 
-          <h1>Hi, I’m Raigo! <br>
+          <div class="bb-message"></div>
+          <!-- normal title -->
+          <h1 class="normal-title">
+            Hi, I’m Raigo! <br>
             I design B2B software and design systems.
           </h1>
+          <!-- playful title -->
+          <h1 class="playful-title" id="playeditme" contenteditable="true">
+            Hi, I’m Raigo! <br>
+            I design B2B software and design systems.
+          </h1>
+          <!-- palyful title conditioning -->
+          <script>
+            const heading = document.getElementById('playeditme');
+            // Function to check viewport and toggle editability
+            function updateEditability() {
+              if (window.innerWidth < 800) {  // under this the title is not editable
+                heading.contentEditable = 'false';
+                heading.style.cursor = 'default';
+              } else {
+                heading.contentEditable = 'true';
+                heading.style.cursor = 'text';
+              }
+            }
+            // Check on load
+            updateEditability();
+            // Check on resize
+            window.addEventListener('resize', updateEditability);
+            // Save on blur
+            heading.addEventListener('blur', function() {
+              const newTitle = this.textContent;
+              console.log('Saved:', newTitle);
+            });
+            // Prevent Enter key from adding new lines
+            heading.addEventListener('keydown', function(e) {
+              if (e.key === 'Enter') {
+                e.preventDefault();
+                this.blur();
+              }
+            });
+          </script>
+          <!--  -->
         </div>
 
         <!-- forcing a break, to avoid using margins that mis-calculate the bounding-box -->
